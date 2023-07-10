@@ -431,7 +431,7 @@
 </template>
 <script>
   import { Card, Button, Collapse, CollapseItem } from '@/components';
-  import { Carousel, CarouselItem, Select, Option, Tooltip } from 'element-ui'
+  import { Carousel, CarouselItem, Select, Option, Tooltip } from 'element-plus'
   import initParallax from '@/utils/initParallax'
   export default {
     name: 'product-page',

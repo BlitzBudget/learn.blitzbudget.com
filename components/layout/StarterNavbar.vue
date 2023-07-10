@@ -28,7 +28,7 @@
 
 <script>
   import { DropDown, NavbarToggleButton, Navbar, NavLink } from '@/components';
-  import { Popover } from 'element-ui'
+  import { Popover } from 'element-plus'
 
   export default {
     name: 'main-navbar',

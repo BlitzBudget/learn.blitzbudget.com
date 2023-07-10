@@ -156,7 +156,7 @@
 </template>
 <script>
   import { Card, Button } from '@/components';
-  import { Carousel, CarouselItem } from 'element-ui'
+  import { Carousel, CarouselItem } from 'element-plus'
 
   export default {
     components: {

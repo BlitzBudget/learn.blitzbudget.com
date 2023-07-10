@@ -30,7 +30,7 @@
 
 </template>
 <script>
-  import { Carousel, CarouselItem } from 'element-ui'
+  import { Carousel, CarouselItem } from 'element-plus'
 
   export default {
     components: {

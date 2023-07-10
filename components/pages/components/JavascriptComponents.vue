@@ -302,7 +302,7 @@
 </template>
 <script>
   import { Card, Button, Modal, FormGroupInput, Collapse, CollapseItem } from '@/components';
-  import { Popover, Tooltip, DatePicker, TimeSelect } from 'element-ui';
+  import { Popover, Tooltip, DatePicker, TimeSelect } from 'element-plus';
 
   export default {
     components: {

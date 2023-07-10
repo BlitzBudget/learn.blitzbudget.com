@@ -493,7 +493,7 @@ import {
   FormGroupInput,
   Checkbox,
 } from "@/components";
-import { Select, Option } from "element-ui";
+import { Select, Option } from "element-plus";
 import initParallax from "@/utils/initParallax";
 export default {
   name: "about-us",

@@ -99,7 +99,7 @@
   import {API_KEY} from '@/constants'
   import Vue from 'vue'
   import initParallax from '@/utils/initParallax'
-  import * as VueGoogleMaps from '~/node_modules/vue2-google-maps'
+  import * as VueGoogleMaps from '~/node_modules/vue3-google-maps'
   Vue.use(VueGoogleMaps, {
     load: {
       key: API_KEY

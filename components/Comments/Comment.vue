@@ -57,7 +57,7 @@
     </div>
 </template>
 <script>
-    import {Tooltip} from 'element-ui';
+    import {Tooltip} from 'element-plus';
     export default {
         name: 'comment',
         components: {

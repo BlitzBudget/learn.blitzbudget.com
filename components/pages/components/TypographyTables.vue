@@ -363,7 +363,7 @@
 </template>
 <script>
     import {Card, Button, Checkbox, Comment, FormGroupInput, Pagination} from '@/components';
-    import {Table, TableColumn, Tooltip} from 'element-ui';
+    import {Table, TableColumn, Tooltip} from 'element-plus';
     import ShoppingTable from './TypographyTables/ShoppingTable'
 
     export default {

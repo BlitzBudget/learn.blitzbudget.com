@@ -535,7 +535,7 @@
 </template>
 <script>
     import {Button, Checkbox, Radio, FormGroupInput, DropDown, Slider, Switch} from '@/components';
-    import {Select, Option, Tag} from 'element-ui';
+    import {Select, Option, Tag} from 'element-plus';
 
     export default {
         components: {

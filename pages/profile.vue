@@ -240,7 +240,7 @@
   import { Badge, Button, InfoSection, FormGroupInput, Card, Tabs, TabPane, Checkbox } from '@/components';
   import { API_KEY } from '@/constants'
   import Vue from 'vue'
-  import * as VueGoogleMaps from '~/node_modules/vue2-google-maps'
+  import * as VueGoogleMaps from '~/node_modules/vue3-google-maps'
   Vue.use(VueGoogleMaps, {
     load: {
       key: API_KEY

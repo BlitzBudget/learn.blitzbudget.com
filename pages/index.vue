@@ -730,7 +730,7 @@
 
 <script>
   import { Card, InfoSection } from '@/components';
-  import { Carousel, CarouselItem, Tooltip } from 'element-ui'
+  import { Carousel, CarouselItem, Tooltip } from 'element-plus'
   import initParallax from '@/utils/initParallax'
   export default {
     name: 'presentation',

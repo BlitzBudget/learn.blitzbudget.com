@@ -146,10 +146,10 @@
 </template>
 <script>
   import { Card, Button, InfoSection, FormGroupInput, Checkbox } from '@/components';
-  import { Carousel, CarouselItem } from 'element-ui'
+  import { Carousel, CarouselItem } from 'element-plus'
   import {API_KEY} from '@/constants'
   import Vue from 'vue'
-  import * as VueGoogleMaps from '~/node_modules/vue2-google-maps'
+  import * as VueGoogleMaps from '~/node_modules/vue3-google-maps'
   Vue.use(VueGoogleMaps, {
     load: {
       key: API_KEY

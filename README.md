@@ -177,7 +177,7 @@ Within the download you'll find the following directories and files:
     |           |   |-- _card-raised.scss
     |           |   |-- _card-signup.scss
     |           |   |-- _card-testimonials.scss
-    |           |-- element-ui-plugins
+    |           |-- element-plus-plugins
     |           |   |-- _carousel.scss
     |           |   |-- _date_picker.scss
     |           |   |-- _input.scss
@@ -328,7 +328,7 @@ Within the download you'll find the following directories and files:
     |       |-- StarterPage.vue
     |-- plugins
     |   |-- README.md
-    |   |-- element-ui.js
+    |   |-- element-plus.js
     |   |-- globalComponents.js
     |   |-- globalDirectives.js
     |   |-- globalMixins.js

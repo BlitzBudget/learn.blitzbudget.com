@@ -333,7 +333,7 @@
 </template>
 <script>
   import { Card, Button, InfoSection, FormGroupInput, Checkbox, Collapse, CollapseItem, Slider } from '@/components';
-  import { Carousel, CarouselItem, Tooltip } from 'element-ui'
+  import { Carousel, CarouselItem, Tooltip } from 'element-plus'
 
   export default {
     name: 'ecommerce-page',

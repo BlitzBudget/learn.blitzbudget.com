@@ -68,7 +68,7 @@
   </div>
 </template>
 <script>
-  import {Table, TableColumn} from 'element-ui'
+  import {Table, TableColumn} from 'element-plus'
   import {Button} from '@/components';
 
   export default {
