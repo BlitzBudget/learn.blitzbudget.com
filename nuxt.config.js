@@ -1,5 +1,9 @@
+
 module.exports = {
   target: 'static',
+  /*
+  ** Headers of the page
+  */
   router: {
     base: '/',
     linkExactActiveClass: 'active'
@@ -24,12 +28,6 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
-  styleResources: {
-    scss: [
-      '~/assets/sass/now-ui-kit/variables.scss',
-      // Other Sass files you want to import globally
-    ]
-  },
   /*
   ** Global CSS
   */
@@ -37,44 +35,19 @@ module.exports = {
     '~/assets/sass/now-ui-kit.scss',
     '~/assets/sass/demo.scss'
   ],
-  modules: [
-    '@element-plus/nuxt',
-    'nuxt-lazy-load'
-  ],
-  buildModules: [
-    '@nuxtjs/pwa',
-  ],
-  pwa: {
-    manifest: {
-      name: 'Learn BlitzBudget',
-      short_name: 'BB',
-      description: 'Learn BlitzBudget Blog for learning interesting concepts',
-      lang: 'en',
-      display: 'standalone',
-    },
-    icon: {
-      fileName: '/favicon.ico',
-    },
-    meta: {
-      theme_color: '#ffffff',
-    },
-  },
-  lazyLoad: {
-    // These are the default values
-    images: true,
-    videos: true,
-    audios: true,
-    iframes: true,
-    native: false,
-    directiveOnly: false, 
-    // Default image must be in the public folder
-    defaultImage: '/img/bg14.jpg',
-  },  
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/globalDirectives.js', ssr: false }
+    { src: '~/plugins/globalDirectives.js', ssr: false },
+    { src: '~/plugins/element-ui.js' },
+    { src: '~/plugins/now-ui-kit' }
+  ],
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+    '@nuxtjs/pwa',
   ],
   /**
    * Create a 404 HTML when generating static resources.
@@ -82,20 +55,26 @@ module.exports = {
   generate: {
     fallback: '404.html'
   },
-  elementPlus: { /** Options */ },
-  module: {
-    rules: [
-      {
-        test: /\.js$/, // Apply Babel Loader to JavaScript files
-        exclude: /node_modules/, // Exclude node_modules from transformation
-        use: {
-          loader: 'babel-loader',
-          options: {
-            // Babel configuration options
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-    ],
-  },
-};
+  /*
+  ** Build configuration
+  */
+  build: {
+    extractCSS: process.env.NODE_ENV === 'production',
+    babel: {
+      plugins: [
+        [
+          'component',
+          {
+            libraryName: 'element-ui',
+            styleLibraryName: 'theme-chalk'
+          }
+        ]
+      ]
+    },
+    /*
+    ** You can extend webpack config here
+    */
+    extend(config, ctx) {
+    }
+  }
+}

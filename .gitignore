@@ -1,12 +1,18 @@
+# dependencies
 node_modules
-.venv
-*.log*
+
+# logs
+npm-debug.log
+
+# Nuxt build
 .nuxt
-.nitro
-.cache
-.output
-.env
+
+# Nuxt generate
 dist
-yarn.lock
-pnpm-lock.yaml
-package-lock.json
+
+# DS Store Ignore
+*/.DS_Store
+.DS_Store
+
+
+static/sw.js
