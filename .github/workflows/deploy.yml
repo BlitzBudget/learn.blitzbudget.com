@@ -56,7 +56,6 @@ jobs:
           --exclude '.vscode/*' \
           --exclude 'sonar-project.properties' \
           --exclude '*config.js' \
-          --exclude 'content/*'
 
       - name: Invalidate Cloudfront Distribution
         run: |
