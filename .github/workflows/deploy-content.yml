@@ -29,12 +29,6 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install dependencies
-        run: yarn
-
-      - name: Generate
-        run: yarn generate
-
       - name: Configure AWS credentials from Production account
         uses: aws-actions/configure-aws-credentials@v2
         with:
