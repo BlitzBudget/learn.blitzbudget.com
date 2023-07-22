@@ -1,7 +1,3 @@
-Golang (also known as Go) is a powerful and efficient programming language, and exploring it in-depth will be beneficial for developers interested in backend development and system programming.
-
-Let's go ahead and outline the structure for the 20 chapters of the Golang course:
-
 ## Golang Fundamentals: A Comprehensive Guide to Go Programming
 
 ### Chapter 1: Introduction to Golang

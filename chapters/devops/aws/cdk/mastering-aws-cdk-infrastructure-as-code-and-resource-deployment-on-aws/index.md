@@ -1,4 +1,4 @@
-#Title: "Mastering AWS CDK: Infrastructure as Code and Resource Deployment on AWS"
+# "Mastering AWS CDK: Infrastructure as Code and Resource Deployment on AWS"
 
 Chapter 1: Introduction to AWS CDK - Getting Started with Infrastructure as Code
 Chapter 2: Setting Up Your AWS CDK Environment - Preparing for Resource Deployment

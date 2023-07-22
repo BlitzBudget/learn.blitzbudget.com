@@ -1,4 +1,4 @@
-Course Name: **Mastering Infrastructure Deployment with AWS CloudFormation and GitHub Workflows**
+# **Mastering Infrastructure Deployment with AWS CloudFormation and GitHub Workflows**
 
 # Chapter 1: Introduction to AWS CloudFormation
 

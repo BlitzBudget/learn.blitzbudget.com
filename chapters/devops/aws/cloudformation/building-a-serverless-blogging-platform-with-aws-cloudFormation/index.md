@@ -1,4 +1,4 @@
-Title: Building a Serverless Blogging Platform with AWS CloudFormation
+# Building a Serverless Blogging Platform with AWS CloudFormation
 
 Chapters:
 Certainly! Here are 20 new chapters that explain the provided AWS CloudFormation template:

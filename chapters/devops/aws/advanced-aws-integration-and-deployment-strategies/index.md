@@ -1,4 +1,4 @@
-Title: **Advanced AWS Integration and Deployment Strategies**
+# Advanced AWS Integration and Deployment Strategies
 
 Chapter Titles:
 1. Introduction to AWS Integration and Deployment

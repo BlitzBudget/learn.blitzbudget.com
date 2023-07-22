@@ -1,4 +1,4 @@
-#GitHub Actions and AWS deployment:
+# GitHub Actions and AWS deployment:
 
 1. Introduction to GitHub Actions: Automating Your Workflows
 2. Getting Started with GitHub Actions YAML Syntax
