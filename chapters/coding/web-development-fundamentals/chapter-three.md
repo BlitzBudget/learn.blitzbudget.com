@@ -1,6 +1,3 @@
-```markdown
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 3: Exploring CSS Essentials
 
 In this chapter, we'll dive into the world of Cascading Style Sheets (CSS). CSS is a powerful language that complements HTML by providing design and presentation capabilities. With CSS, you can control the layout, color, typography, and overall visual appearance of your web pages. Let's explore the essentials of CSS and learn how to style your HTML content.

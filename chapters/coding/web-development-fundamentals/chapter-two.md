@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 2: Understanding HTML Basics
 
 In this chapter, we'll dive into the core of web development - HTML. HTML, which stands for Hypertext Markup Language, is the fundamental language used to create the structure and content of a web page. Let's explore the basics of HTML and get you started on your web development journey.

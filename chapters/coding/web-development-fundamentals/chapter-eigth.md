@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 8: Working with Forms and Input Validation
 
 In this chapter, we'll explore HTML forms and how to handle user input effectively. Forms are crucial for gathering data from users, such as login details, contact information, or search queries. We'll also dive into input validation to ensure that the data submitted through forms is accurate and secure.

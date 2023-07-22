@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 7: CSS Flexbox and Grid Layouts
 
 In this chapter, we'll explore two powerful CSS layout systems: Flexbox and Grid. These layout models provide flexible and dynamic ways to create complex page structures, making it easier to design responsive and modern web layouts.

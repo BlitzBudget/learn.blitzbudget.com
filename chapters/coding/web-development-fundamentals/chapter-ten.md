@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 10: Backend Development with Node.js: Modules, Middleware, and RESTful APIs
 
 In this chapter, we'll dive deeper into backend development using Node.js. We'll explore the concept of modules to organize your code, middleware to enhance the functionality of your server, and RESTful APIs to create a powerful and flexible backend for your web applications.

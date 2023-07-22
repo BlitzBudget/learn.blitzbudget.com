@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 17: Deploying Web Applications
 
 In this chapter, we'll explore the process of deploying web applications to make them accessible to users on the internet. Deploying a web application involves setting up a production environment and ensuring that the application is secure, reliable, and performs optimally.

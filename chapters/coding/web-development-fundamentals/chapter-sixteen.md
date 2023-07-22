@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 16: Introduction to Version Control with Git
 
 In this chapter, we'll explore the fundamental concepts of version control using Git, a widely used distributed version control system. Git is an essential tool for web developers to track changes, collaborate with teams, and manage code repositories efficiently.

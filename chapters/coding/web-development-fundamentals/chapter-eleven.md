@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 11: Database Fundamentals: SQL and NoSQL
 
 In this chapter, we'll dive into the fundamentals of databases, covering both SQL (Structured Query Language) and NoSQL (Not Only SQL) databases. Databases are the backbone of web applications, enabling efficient storage, retrieval, and management of data.

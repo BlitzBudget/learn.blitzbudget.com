@@ -1,7 +1,3 @@
-Let's move on to the fourth chapter, "Getting Started with JavaScript,"
-
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 4: Getting Started with JavaScript
 
 JavaScript is a dynamic and versatile programming language that adds interactivity and functionality to web pages. In this chapter, we'll introduce you to the basics of JavaScript and show you how to bring your web pages to life with this powerful language.

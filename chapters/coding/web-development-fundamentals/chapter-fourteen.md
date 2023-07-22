@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 14: Frontend Frameworks: React.js and Vue.js
 
 In this chapter, we'll explore two popular frontend JavaScript frameworks, React.js and Vue.js. These frameworks provide powerful tools and abstractions for building dynamic and interactive user interfaces, making frontend development more efficient and enjoyable.

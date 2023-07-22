@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 9: Introduction to Server-Side Programming
 
 In this chapter, we'll delve into server-side programming, a critical aspect of web development that enables you to handle business logic, data processing, and communication with databases. We'll introduce you to server-side languages, with a focus on Node.js, and show you how to build robust server-side applications.

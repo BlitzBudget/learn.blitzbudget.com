@@ -1,5 +1,3 @@
-# Web Development Fundamentals: A Journey to Mastering Modern Web Technologies
-
 ## Chapter 1: Introduction to Web Development
 
 Welcome to the exciting world of web development! In this chapter, we'll lay the foundation for your journey to becoming a proficient web developer. Web development encompasses a wide range of skills and technologies, enabling you to create dynamic and interactive websites and web applications that users love.
