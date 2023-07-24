@@ -1,0 +1,81 @@
+# Serverless Golang: Building AWS-Integrated Applications with Lambda Triggers and Actions
+
+**Chapter 1: Introduction to Serverless Applications with Go**
+
+In this chapter, we'll give an overview of serverless architecture and its benefits. We'll also introduce Go as the programming language for our serverless applications and discuss why it's a great choice. By the end of this chapter, you'll understand the basics of serverless development in Go.
+
+**Chapter 2: Setting Up AWS Account and CLI**
+
+Here, we'll guide you through the process of creating an AWS account and installing the AWS Command Line Interface (CLI). This will enable you to interact with various AWS services through the command line, making it easier to manage your serverless applications.
+
+**Chapter 3: Building Your First Serverless Go Function**
+
+In this chapter, we'll help you set up your development environment for building Go-based serverless functions. We'll guide you through creating a simple "Hello World" function and deploying it to AWS Lambda. You'll see how easy it is to get started with serverless Go development.
+
+**Chapter 4: Using Amazon Polly in Go**
+
+Explore Amazon Polly, AWS's Text-to-Speech service, and learn how to integrate it into your Go serverless applications. We'll demonstrate how to convert text to speech using the Polly API and store the results in AWS S3.
+
+**Chapter 5: Working with AWS S3**
+
+In this chapter, we'll dive deeper into AWS S3 (Simple Storage Service) and show you how to interact with it using Go. You'll learn how to upload, download, and manage files in S3 from your serverless Go functions.
+
+**Chapter 6: Leveraging DynamoDB with Go**
+
+Discover Amazon DynamoDB, a NoSQL database service from AWS, and understand how to interact with it using Go. You'll learn how to create tables, perform CRUD (Create, Read, Update, Delete) operations, and handle DynamoDB streams.
+
+**Chapter 7: Accessing RDS in a VPC**
+
+For scenarios where your serverless Go application needs to access a Relational Database Service (RDS) within a Virtual Private Cloud (VPC), this chapter will guide you through the setup process and how to manage permissions for RDS access from your Lambda functions.
+
+**Chapter 8: Fetching Secrets from Go using AWS Secrets Manager**
+
+Learn how to securely retrieve secrets, such as API keys or database passwords, from your Go serverless functions using AWS Secrets Manager. We'll show you how to access and manage secrets securely in your applications.
+
+**Chapter 9: Publishing to Amazon SNS**
+
+Explore Amazon SNS (Simple Notification Service) and see how to publish messages to topics using Go. You'll be able to send notifications and alerts from your serverless Go functions.
+
+**Chapter 10: Subscribing to Amazon SNS and Triggering a Lambda Function**
+
+In this chapter, we'll show you how to subscribe to an SNS topic and trigger a Lambda function written in Go when a new message is published. This will allow you to automate workflows and perform specific actions based on notifications.
+
+**Chapter 11: Handling S3 Events with Go Lambdas**
+
+Learn how to set up an S3 event trigger for your serverless Go functions. When new objects are created or modified in an S3 bucket, your Lambda function will be automatically executed to process the data.
+
+**Chapter 12: Processing S3 Event Data and Storing it in DynamoDB**
+
+In this chapter, we'll guide you through the process of handling data from S3 event triggers and storing it in DynamoDB using Go. You'll learn how to extract relevant information from the event and efficiently save it in the database.
+
+**Chapter 13: Error Handling and Logging**
+
+Explore best practices for error handling and logging in serverless Go applications. We'll demonstrate how to handle errors gracefully and log useful information to aid in debugging and monitoring.
+
+**Chapter 14: Managing Environment Variables**
+
+Understand the importance of managing environment variables in your serverless Go functions. We'll explain how to securely store sensitive configuration data and access them from your code.
+
+**Chapter 15: Creating a Golang Lambda Function with SNS Trigger**
+
+In this chapter, you'll learn how to create a serverless Golang Lambda function and configure it to be triggered by an SNS (Simple Notification Service) topic. We'll guide you through setting up the necessary permissions, creating the Lambda function, and handling incoming SNS messages in your Golang code.
+
+**Chapter 16: Creating a Golang Lambda Function with S3 Event Trigger**
+
+Explore how to build a serverless Golang Lambda function that responds to S3 bucket events. We'll show you how to set up the Lambda function to process new object creations or modifications in an S3 bucket and perform custom logic, such as image resizing or file processing.
+
+**Chapter 17: Creating a Golang Lambda Function with DynamoDB Stream Trigger**
+
+In this chapter, we'll guide you through building a Golang Lambda function that's triggered by changes in a DynamoDB table. You'll learn how to capture and process DynamoDB stream events using Golang, enabling you to react to database changes in real-time.
+
+**Chapter 18: Sending Emails with Golang Lambda Function**
+
+Discover how to use a Golang Lambda function to send emails using Amazon SES (Simple Email Service). We'll demonstrate how to set up SES, configure the necessary IAM permissions for your Lambda function, and create a Golang function that sends emails based on specific events or triggers.
+
+**Chapter 19: Sending SMS with Golang Lambda Function using SNS**
+
+Learn how to send SMS (Short Message Service) messages using a Golang Lambda function and Amazon SNS. We'll show you how to integrate SNS with your Golang code to send SMS notifications, alerts, or OTP (One-Time Passwords) to mobile devices.
+
+**Chapter 20: Creating a Golang Lambda Function to Process S3 Event Data and Store it in DynamoDB**
+
+In this chapter, we'll combine the concepts from earlier chapters to create a powerful Golang Lambda function. The function will be triggered by S3 events, and upon receiving new objects in the S3 bucket, it will process the data and store relevant information in DynamoDB. This example will demonstrate the seamless integration of different AWS services in a serverless Golang application.
