@@ -49,7 +49,12 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/axios',
   ],
+  axios: {
+    baseURL: 'https://learn.blitzbudget.com',
+    https: true,
+  },
   /**
    * Create a 404 HTML when generating static resources.
    */

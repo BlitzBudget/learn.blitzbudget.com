@@ -101,7 +101,6 @@
 </template>
   
 <script>
-import axios from 'axios';
 import MarkdownIt from 'markdown-it';
 import OtherBlogs from "@/components/BlogPosts/OtherBlogs.vue";
 import {
@@ -157,8 +156,8 @@ export default {
     },
     methods: {
         fetchMarkdownContent() {
-            const githubMarkdownURL = 'https://learn.blitzbudget.com/content/coding/github/workflows/github-actions-and-aws-deployment/chapter-1-introduction-to-github-actions-automating-your-workflows.json'; // Replace with your GitHub Markdown file URL
-            axios.get(githubMarkdownURL)
+            const githubMarkdownURL = '/content/coding/github/workflows/github-actions-and-aws-deployment/chapter-1-introduction-to-github-actions-automating-your-workflows.json'; // Replace with your GitHub Markdown file URL
+            this.$axios.get(githubMarkdownURL)
                 .then((response) => {
                     this.markdownContent = response.data.content;
                     this.blogPost = response.data
