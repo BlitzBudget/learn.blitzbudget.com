@@ -1,6 +1,6 @@
 <!-- App.vue -->
 <template>
-        <DisplayBlog />
+    <DisplayBlog />
 </template>
   
 <script>
