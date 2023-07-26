@@ -156,7 +156,7 @@ export default {
     },
     methods: {
         fetchMarkdownContent() {
-            const githubMarkdownURL = '/content/coding/github/workflows/github-actions-and-aws-deployment/chapter-1-introduction-to-github-actions-automating-your-workflows.json'; // Replace with your GitHub Markdown file URL
+            const githubMarkdownURL = '/content' + this.$route.fullPath; // Replace with your GitHub Markdown file URL
             this.$axios.get(githubMarkdownURL)
                 .then((response) => {
                     this.markdownContent = response.data.content;

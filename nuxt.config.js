@@ -7,7 +7,6 @@ module.exports = {
   router: {
     base: '/',
     linkExactActiveClass: 'active',
-    middleware: ['redirects']
   },
   head: {
     titleTemplate: '%s - BlitzBudget',
