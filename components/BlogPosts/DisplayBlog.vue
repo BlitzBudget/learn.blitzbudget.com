@@ -143,7 +143,7 @@ export default {
             };
         },
         fetchAuthorImageUrl() {
-            let authorSlug;
+            let authorSlug = "nagarjun-nagesh";
             if (this.blogPost.author) {
                 authorSlug = this.blogPost.author
                     .toLowerCase()
