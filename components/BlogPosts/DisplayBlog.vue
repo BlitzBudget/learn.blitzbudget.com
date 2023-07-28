@@ -162,7 +162,7 @@ export default {
             const description = this.fetchDescriptionFromContent();
             // Set the meta tags dynamically on the client-side
             this.$setHead({
-                title: this.contentData.title || 'Learn BlitzBudget',
+                title: this.blogPost.name || 'Learn BlitzBudget',
                 meta: [
                     { hid: 'description', name: 'description', content: description },
                     { hid: 'keywords', name: 'keywords', content: this.blogPost.tags },
