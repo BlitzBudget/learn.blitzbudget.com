@@ -97,6 +97,12 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
   ],
+  buildModules: [
+    '@nuxtjs/google-analytics'
+  ],
+  googleAnalytics: {
+    id: 'G-GV3P9RVSZZ'
+  },
   axios: {
     baseURL: 'https://learn.api.blitzbudget.com',
     https: true,
