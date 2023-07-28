@@ -123,16 +123,17 @@ export default {
                 audio_created: false,
                 audioURL: null,
             },
-            imageURL: null
+            imageURL: "/img/coding/bg-1.jpg"
         };
     },
     components: {
         OtherBlogs,
         Card,
     },
-    mounted() {
+    async mounted() {
         initParallax();
-        this.fetchMarkdownContent();
+        await this.fetchMarkdownContent();
+        this.setHeaders();
     },
     computed: {
         backgroundImageStyle() {
@@ -155,7 +156,36 @@ export default {
         },
     },
     methods: {
-        fetchMarkdownContent() {
+        setHeaders() {
+            // Generate dynamic meta tags based on the fetched data
+            const canonicalUrl = `https://learn.blitzbudget.com/${this.$route.fullPath}`;
+            const description = this.fetchDescriptionFromContent();
+            // Set the meta tags dynamically on the client-side
+            this.$setHead({
+                title: this.contentData.title || 'Learn BlitzBudget',
+                meta: [
+                    { hid: 'description', name: 'description', content: description },
+                    { hid: 'keywords', name: 'keywords', content: this.blogPost.tags },
+                    { name: 'author', content: this.blogPost.author },
+                    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+                    { hid: 'og:title', property: 'og:title', content: this.blogPost.name },
+                    { hid: 'og:description', property: 'og:description', content: description },
+                    { hid: 'og:image', property: 'og:image', content: this.imageURL },
+                    { hid: 'og:url', property: 'og:url', content: canonicalUrl },
+                    { name: 'twitter:card', content: 'summary_large_image' },
+                    { name: 'twitter:title', content: this.blogPost.name },
+                    { name: 'twitter:description', content: description },
+                    { name: 'twitter:image', content: this.imageURL },
+                    { name: 'robots', content: 'index,follow' },
+                    { 'http-equiv': 'expires', content: 'Fri, 01 Jan 2023 00:00:00 GMT' },
+                    { 'http-equiv': 'content-language', content: 'en' }
+                ],
+                link: [
+                    { rel: 'canonical', href: canonicalUrl }
+                ],
+            });
+        },
+        async fetchMarkdownContent() {
             const githubMarkdownURL = '/content' + this.$route.fullPath; // Replace with your GitHub Markdown file URL
             this.$axios.get(githubMarkdownURL)
                 .then((response) => {
@@ -201,35 +231,6 @@ export default {
             console.log(firstSentence); // Output the first sentence of the content
             return firstSentence
         }
-    },
-    head() {
-        // Generate dynamic meta tags based on the fetched data
-        const canonicalUrl = `https://learn.blitzbudget.com/${this.$route.fullPath}`;
-        const description = this.fetchDescriptionFromContent();
-
-        return {
-            title: this.blogPost.name,
-            meta: [
-                { hid: 'description', name: 'description', content: description },
-                { hid: 'keywords', name: 'keywords', content: this.blogPost.tags },
-                { name: 'author', content: this.blogPost.author },
-                { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-                { hid: 'og:title', property: 'og:title', content: this.blogPost.name },
-                { hid: 'og:description', property: 'og:description', content: description },
-                { hid: 'og:image', property: 'og:image', content: this.imageURL },
-                { hid: 'og:url', property: 'og:url', content: canonicalUrl },
-                { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:title', content: this.blogPost.name },
-                { name: 'twitter:description', content: description },
-                { name: 'twitter:image', content: this.imageURL },
-                { name: 'robots', content: 'index,follow' },
-                { 'http-equiv': 'expires', content: 'Fri, 01 Jan 2023 00:00:00 GMT' },
-                { 'http-equiv': 'content-language', content: 'en' }
-            ],
-            link: [
-                { rel: 'canonical', href: canonicalUrl }
-            ],
-        };
     },
 };
 </script>
