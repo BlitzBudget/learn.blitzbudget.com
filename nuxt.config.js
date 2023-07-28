@@ -104,7 +104,7 @@ module.exports = {
     id: 'G-GV3P9RVSZZ'
   },
   axios: {
-    baseURL: 'https://learn.api.blitzbudget.com',
+    baseURL: 'https://learn.blitzbudget.com',
     https: true,
   },
   /**
