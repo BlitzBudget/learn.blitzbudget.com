@@ -26,6 +26,7 @@
     "vue2-transitions": "0.3.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "babel-plugin-component": "1.1.1",
     "node-sass": "5.0.0",
     "sass-loader": "10.1.1"
