@@ -186,7 +186,7 @@ export default {
             });
         },
         async fetchMarkdownContent() {
-            const githubMarkdownURL = '/content' + this.$route.fullPath; // Replace with your GitHub Markdown file URL
+            const githubMarkdownURL = '/content' + this.$route.fullPath + '.json';
             this.$axios.get(githubMarkdownURL)
                 .then((response) => {
                     this.markdownContent = response.data.content;
