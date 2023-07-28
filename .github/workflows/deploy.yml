@@ -54,7 +54,8 @@ jobs:
           --exclude '.github/*' \
           --exclude '*.md' \
           --exclude '.vscode/*' \
-          --exclude 'content/*'
+          --exclude 'content/*' \
+          --size-only
 
       - name: Invalidate Cloudfront Distribution
         run: |
