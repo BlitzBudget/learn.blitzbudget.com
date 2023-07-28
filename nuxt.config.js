@@ -56,7 +56,10 @@ module.exports = {
         // Log the response
         console.log("The length of the response is: ", response.data.items.length);
         // Fetch the "sk" values and remove the "content/" prefix
-        const skList = response.data.items.map(item => item.sk.replace('content/', ''));
+        const skList = response.data.items.map(item => {
+          const skWithoutContent = item.sk.replace(/^content\/|\.json$/g, '');
+          return skWithoutContent;
+        });
 
 
         // Assuming the API response contains an array of URLs, extract them
