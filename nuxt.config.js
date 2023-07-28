@@ -1,3 +1,4 @@
+import axios from 'axios';
 
 module.exports = {
   target: 'static',
@@ -24,6 +25,51 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css', crossorigin: 'anonymous' }
     ]
   },
+  sitemap: {
+    // Add your sitemap options here
+    path: '/sitemap.xml',
+    hostname: 'https://learn.blitzbudget.com',
+    gzip: true, // Enable gzip compression for the sitemap.xml file
+    exclude: [],
+    routes: async () => {
+      const apiUrl = 'https://learn.api.blitzbudget.com/fetch-blogs'; // Replace with your API endpoint URL
+
+      try {
+        // Replace 'postData' with the data you want to send in the POST request body
+        const postData = {
+          "url": "" // Sitemap Directory
+        };
+
+        const headers = {
+          'Content-Type': 'application/json',
+          'x-api-key': 'g5orXkIHDW21X7iYOPxva6AyWWSBq77O9QNT4fNH',
+        };
+
+        // Make the POST request using Axios to fetch sitemap URLs
+        const response = await axios.post(apiUrl, postData, { headers });
+
+        if (!response?.data?.items?.length === 0) {
+          console.log("No data found");
+          return [];
+        }
+
+        // Log the response
+        console.log("The length of the response is: ", response.data.items.length);
+        // Fetch the "sk" values and remove the "content/" prefix
+        const skList = response.data.items.map(item => item.sk.replace('content/', ''));
+
+
+        // Assuming the API response contains an array of URLs, extract them
+        const urls = skList;
+
+        // Return the array of URLs for the sitemap generation
+        return urls;
+      } catch (error) {
+        console.error('Error fetching sitemap URLs:', error);
+        return []; // Return an empty array in case of error
+      }
+    }
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -49,9 +95,10 @@ module.exports = {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
   ],
   axios: {
-    baseURL: 'https://learn.blitzbudget.com',
+    baseURL: 'https://learn.api.blitzbudget.com',
     https: true,
   },
   /**
