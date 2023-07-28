@@ -161,7 +161,7 @@ export default {
             const canonicalUrl = `https://learn.blitzbudget.com/${this.$route.fullPath}`;
             const description = this.fetchDescriptionFromContent();
             // Set the meta tags dynamically on the client-side
-            this.$nuxt.$options.head = () => ({
+            /*this.$nuxt.$options.head = () => ({
                 title: this.blogPost.name || 'Learn BlitzBudget',
                 meta: [
                     { hid: 'description', name: 'description', content: description },
@@ -183,7 +183,7 @@ export default {
                 link: [
                     { rel: 'canonical', href: canonicalUrl }
                 ],
-            });
+            });*/
         },
         async fetchMarkdownContent() {
             const githubMarkdownURL = '/content' + this.$route.fullPath + '.json';
