@@ -122,8 +122,8 @@ export default {
             // Extract sk values and create a list of sk elements
             const baseUrl = url.substring(0, url.lastIndexOf("/"));
             const reducedList = this.blogposts.map(item => {
-                let fileURL = formatSk(item.sk)
-                if (item.Category.startsWith(baseUrl) && fileURL !== removeTrailingSlash(url)) {
+                let fileURL = this.formatSk(item.sk)
+                if (item.Category.startsWith(baseUrl) && fileURL !== this.removeTrailingSlash(url)) {
                     item.FileURL = fileURL;
                     return item;
                 }
