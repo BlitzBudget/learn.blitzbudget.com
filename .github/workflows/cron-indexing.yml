@@ -61,4 +61,4 @@ jobs:
 
       - name: Invalidate Cloudfront Distribution
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION }} --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION }} --paths "/content/index.json" "/sitemap.xml" "/sitemap.xml.gz"
