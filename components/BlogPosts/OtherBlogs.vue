@@ -131,11 +131,11 @@ export default {
             // Check if reducedList has at least two items
             if (reducedList.length >= 1) {
                 // Assign the first item in reducedList to the selectedItem variable
-                this.nextBlog = this.reducedList[0];
+                this.nextBlog = reducedList[0];
             }
             if (reducedList.length >= 2) {
                 // assign the previous item 
-                this.previousBlog = this.reducedList[1];
+                this.previousBlog = reducedList[1];
             }
         },
         extractKeywordAndConstructURL(blogPost) {
