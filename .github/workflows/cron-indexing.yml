@@ -50,14 +50,7 @@ jobs:
 
       - name: Production - Upload to S3
         run: |
-          aws s3 sync ./dist s3://${{ secrets.AWS_S3_BUCKET }}/ \
-          --exclude 'js/credentials.js' \
-          --exclude '.git/*' \
-          --exclude '.github/*' \
-          --exclude '*.md' \
-          --exclude '.vscode/*' \
-          --exclude 'content/*' \
-          --size-only
+          aws s3 sync ./dist s3://${{ secrets.AWS_S3_BUCKET }} --exclude "*" --include "sitemap.xml" --include "sitemap.xml.gz" --size-only
 
       - name: Invalidate Cloudfront Distribution
         run: |
