@@ -95,7 +95,7 @@
             </div>
         </div>
         <div class="section">
-            <other-blogs :next="16" :previous="17"></other-blogs>
+            <other-blogs></other-blogs>
         </div>
     </div>
 </template>
