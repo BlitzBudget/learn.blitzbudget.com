@@ -90,7 +90,7 @@ module.exports = {
   plugins: [
     { src: '~/plugins/globalDirectives.js', ssr: false },
     { src: '~/plugins/element-ui.js' },
-    { src: '~/plugins/now-ui-kit' }
+    { src: '~/plugins/now-ui-kit' },
   ],
   /*
   ** Nuxt.js modules
@@ -107,7 +107,8 @@ module.exports = {
     id: 'G-GV3P9RVSZZ'
   },
   axios: {
-    baseURL: 'https://learn.blitzbudget.com',
+    // Use the mocked API URL during development or testing
+    baseURL: process.env.NODE_ENV === 'development' ? '/api' : 'https://learn.blitzbudget.com',
     https: true,
   },
   /**

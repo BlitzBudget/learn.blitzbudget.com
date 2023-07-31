@@ -11,21 +11,21 @@
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div class="card-image">
-                                            <img class="img img-raised rounded" :src="nextImageURL" :alt="nextBlog.name" />
+                                            <img class="img img-raised rounded" :src="nextImageURL" :alt="nextBlog.Name" />
                                         </div>
                                     </div>
                                     <div class="col-md-7">
-                                        <h6 class="category text-info">{{ nextBlog.tags }}</h6>
+                                        <h6 class="category text-info">{{ nextBlog.Tags }}</h6>
                                         <h3 class="card-title">
-                                            <nuxt-link :to="nextBlog.FileURL">{{ nextBlog.name }}
+                                            <nuxt-link :to="nextBlog.FileURL">{{ nextBlog.Name }}
                                             </nuxt-link>
                                         </h3>
                                         <p class="card-description">
-                                            {{ nextBlog.name }}....
+                                            {{ nextBlog.Name }}....
                                         </p>
                                         <p class="author">
                                             by
-                                            <strong>{{ nextBlog.author }}</strong> , {{ nextBlog.creation_date }}
+                                            <strong>{{ nextBlog.Author }}</strong> , {{ nextBlog.creation_date }}
                                         </p>
                                     </div>
                                 </div>
@@ -36,24 +36,24 @@
                                 <div class="col-md-7">
                                     <h6 class="category text-danger">
                                         <em class="now-ui-icons now-ui-icons media-2_sound-wave"></em>
-                                        {{ previousBlog.tags }}
+                                        {{ previousBlog.Tags }}
                                     </h6>
                                     <h3 class="card-title">
-                                        <nuxt-link :to="previousBlog.FileURL">{{ previousBlog.name }}
+                                        <nuxt-link :to="previousBlog.FileURL">{{ previousBlog.Name }}
                                         </nuxt-link>
                                     </h3>
                                     <p class="card-description">
-                                        {{ previousBlog.name }}.....
+                                        {{ previousBlog.Name }}.....
                                     </p>
                                     <p class="author">
                                         by
-                                        <strong>{{ nextBlog.author }}</strong> , {{ nextBlog.creation_date }}
+                                        <strong>{{ nextBlog.Author }}</strong> , {{ nextBlog.creation_date }}
                                     </p>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <img class="img img-raised rounded" :src="previousImageURL"
-                                            :alt="previousBlog.name" />
+                                            :alt="previousBlog.Name" />
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +78,47 @@ export default {
     data() {
         return {
             year: new Date().getFullYear(),
-            blogposts: null,
+            blogposts: [
+                {
+                    "pk": "learn.blitzbudget.com",
+                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows.json",
+                    "Author": "Nagarjun Nagesh",
+                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
+                    "creation_date": "2023-07-28T11:21:57Z",
+                    "File": "",
+                    "Name": "Mastering Infrastructure Deployment with AWS CloudFormation and GitHub Workflows",
+                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                },
+                {
+                    "pk": "learn.blitzbudget.com",
+                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-9-linking-the-api-domain-name-with-route-53.json",
+                    "Author": "Nagarjun Nagesh",
+                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
+                    "creation_date": "2023-07-28T11:21:57Z",
+                    "File": "",
+                    "Name": "Chapter 9: Linking the API Domain Name with Route 53",
+                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                },
+                {
+                    "pk": "learn.blitzbudget.com",
+                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-8-linking-the-api-domain-name-with-an-http-certificate.json",
+                    "Author": "Nagarjun Nagesh",
+                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
+                    "creation_date": "2023-07-28T11:21:57Z",
+                    "File": "",
+                    "Name": "Chapter 8: Linking the API Domain Name with an HTTP Certificate",
+                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                },
+                {
+                    "pk": "learn.blitzbudget.com",
+                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-7-generating-a-certificate-in-us-east-1-for-the-domain.json",
+                    "Author": "Nagarjun Nagesh",
+                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
+                    "creation_date": "2023-07-28T11:21:57Z",
+                    "File": "",
+                    "Name": "Chapter 7: Generating a Certificate in us-east-1 for the Domain",
+                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                }],
             nextBlog: {
                 pk: "learn.blitzbudget.com",
                 sk: "content/coding/backend/serverless/golang/golang-fundamentals/chapter-1-introduction-to-golang.json",
@@ -106,7 +146,7 @@ export default {
     methods: {
         async fetchMarkdownContent() {
             const fetchIndexUrl = '/content/index.json';
-            this.$axios.get(fetchIndexUrl)
+            await this.$axios.get(fetchIndexUrl)
                 .then((response) => {
                     this.blogposts = response.data
                     this.fetchRelatedBlogs();
@@ -119,28 +159,20 @@ export default {
         },
         fetchRelatedBlogs() {
             const url = this.$route.fullPath
-            // Extract sk values and create a list of sk elements
-            const baseUrl = url.substring(0, url.lastIndexOf("/"));
-            const reducedList = this.blogposts.map(item => {
-                let fileURL = this.formatSk(item.sk)
-                if (item.Category.startsWith(baseUrl) && fileURL !== this.removeTrailingSlash(url)) {
-                    item.FileURL = fileURL;
-                    return item;
-                }
-            });
-            // Check if reducedList has at least two items
-            if (reducedList.length >= 1) {
-                // Assign the first item in reducedList to the selectedItem variable
-                this.nextBlog = reducedList[0];
+            const filteredList = this.blogposts.filter(item => item.Category.includes(url));
+            // Check if filteredList has at least two items
+            if (filteredList.length >= 1) {
+                // Assign the first item in filteredList to the selectedItem variable
+                this.nextBlog = filteredList[0];
             }
-            if (reducedList.length >= 2) {
+            if (filteredList.length >= 2) {
                 // assign the previous item 
-                this.previousBlog = reducedList[1];
+                this.previousBlog = filteredList[1];
             }
         },
         extractKeywordAndConstructURL(blogPost) {
             // Split the URL by slashes to get individual parts
-            const parts = blogPost.category.split("/");
+            const parts = blogPost.Category.split("/");
 
             // Get the first part of the URL
             this.fetchedKeyword = parts[0];
@@ -149,7 +181,7 @@ export default {
             const random = Math.floor(Math.random() * 125) + 1;
 
             // Construct the new URL
-            this.imageURL = `img/${this.fetchedKeyword}/bg-${random}.jpg`;
+            return `img/${this.fetchedKeyword}/bg-${random}.jpg`;
         },
         fetchDescriptionFromContent() {
             // Assuming this.blogPost.content contains the content string
