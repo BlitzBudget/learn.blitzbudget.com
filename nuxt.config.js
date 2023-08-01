@@ -11,11 +11,6 @@ module.exports = {
   },
   head: {
     titleTemplate: 'Learn BlitzBudget',
-    meta: [
-      { charset: 'text/html; charset=utf-8' },
-      { name: "author", content: "Nagarjun Nagesh" },
-      { name: "robots", content: "index,follow" }
-    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,700,200|Open+Sans+Condensed:700' },
