@@ -47,7 +47,7 @@
                                     </p>
                                     <p class="author">
                                         by
-                                        <strong>{{ nextBlog.Author }}</strong> , {{ nextBlog.creation_date }}
+                                        <strong>{{ previousBlog.Author }}</strong> , {{ previousBlog.creation_date }}
                                     </p>
                                 </div>
                                 <div class="col-md-5">
