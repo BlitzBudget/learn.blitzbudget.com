@@ -197,7 +197,7 @@ export default {
             const random = Math.floor(Math.random() * 125) + 1;
 
             // Construct the new URL
-            return `img/${this.fetchedKeyword}/bg-${random}.jpg`;
+            return `/img/${this.fetchedKeyword}/bg-${random}.jpg`;
         },
         fetchDescriptionFromContent() {
             // Assuming this.blogPost.content contains the content string
@@ -217,7 +217,7 @@ export default {
         },
         formatSk(sk) {
             // Remove "/content" and ".json" from the sk string
-            return sk.replace(/^content\/|\.json$/g, '');
+            return "/" + sk.replace(/^content\/|\.json$/g, '');
         },
         removeStartingSlash(url) {
             // Remove the trailing slash from the URL
