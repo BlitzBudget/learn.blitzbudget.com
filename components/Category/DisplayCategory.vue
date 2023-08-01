@@ -197,7 +197,7 @@ export default {
             const fetchIndexUrl = '/content/index.json';
             await this.$axios.get(fetchIndexUrl)
                 .then((response) => {
-                    this.blogposts = response.data
+                    this.blogposts = response.data;
                 })
                 .catch((error) => {
                     console.error('Error fetching content:', error);
@@ -206,11 +206,19 @@ export default {
             this.extractKeywordAndConstructURLs();
         },
         extractKeywordAndConstructURLs() {
+            let filteredPosts = [];
             this.blogposts.forEach((item) => {
+                if (item.Name.includes("Chapter ")) {
+                    return
+                }
+
                 item.ImageURL = this.extractKeywordAndConstructURL(item)
                 item.AuthorURL = this.fetchAuthorImageUrl(item)
                 item.FileURL = this.formatSk(item.sk)
+                filteredPosts.push(item)
             });
+
+            this.blogposts = filteredPosts
         },
         formatSk(sk) {
             // Remove "/content" and ".json" from the sk string
