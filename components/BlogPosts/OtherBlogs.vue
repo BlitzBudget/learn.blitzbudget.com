@@ -149,17 +149,33 @@ export default {
             await this.$axios.get(fetchIndexUrl)
                 .then((response) => {
                     this.blogposts = response.data
-                    this.fetchRelatedBlogs();
-                    this.nextImageURL = this.extractKeywordAndConstructURL(this.nextBlog);
-                    this.previousImageURL = this.extractKeywordAndConstructURL(this.previousBlog);
+                })
+                .catch((error) => {
+                    console.error('Error fetching content:', error);
+                });
+
+            this.fetchRelatedBlogs();
+            this.nextImageURL = this.extractKeywordAndConstructURL(this.nextBlog);
+            this.previousImageURL = this.extractKeywordAndConstructURL(this.previousBlog);
+            await this.fetchBlogContentForDescription(this.nextBlog.sk)
+            await this.fetchBlogContentForDescription(this.previousBlog.sk)
+        },
+        async fetchBlogContentForDescription(blogURL) {
+            await this.$axios.get(blogURL)
+                .then((response) => {
+                    console.log(response)
                 })
                 .catch((error) => {
                     console.error('Error fetching content:', error);
                 });
         },
         fetchRelatedBlogs() {
-            const url = this.$route.fullPath
-            const filteredList = this.blogposts.filter(item => item.Category.includes(url));
+            const url = this.removeStartingSlash(this.$route.fullPath)
+            const filteredList = this.blogposts.filter(item => {
+                let category = item.Category
+                item.FileURL = this.formatSk(item.sk)
+                return url.indexOf(category)
+            });
             // Check if filteredList has at least two items
             if (filteredList.length >= 1) {
                 // Assign the first item in filteredList to the selectedItem variable
@@ -201,11 +217,11 @@ export default {
         },
         formatSk(sk) {
             // Remove "/content" and ".json" from the sk string
-            return sk.replace(/^\/content|\.json$/g, '');
+            return sk.replace(/^content\/|\.json$/g, '');
         },
-        removeTrailingSlash(url) {
+        removeStartingSlash(url) {
             // Remove the trailing slash from the URL
-            return url.replace(/\/$/, '');
+            return url.replace(/^\/(.*)/, '$1')
         }
     },
     mounted() {

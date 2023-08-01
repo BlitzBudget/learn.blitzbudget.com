@@ -13,8 +13,6 @@ module.exports = {
     titleTemplate: '%s BlitzBudget',
     meta: [
       { charset: 'text/html; charset=utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=1, shrink-to-fit=no' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { name: "author", content: "Nagarjun Nagesh" },
       { name: "robots", content: "index,follow" }
     ],
