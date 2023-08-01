@@ -55,7 +55,8 @@
                                 </div>
                                 <div class="card-body">
                                     <h6 class="category text-danger">
-                                        <em class="now-ui-icons media-2_sound-wave"></em> {{ post.Tags }}
+                                        <em class="now-ui-icons media-2_sound-wave"></em>{{
+                                            post.Tags }}
                                     </h6>
                                     <h4 class="card-title">
                                         <nuxt-link :to="post.FileURL">{{ post.Name }}</nuxt-link>
@@ -95,7 +96,7 @@ export default {
         return {
             year: new Date().getFullYear(),
             imageURL: "/img/coding/bg-1.jpg",
-            categoryName: null,
+            categoryName: "Coding",
             previewBlogs: [
                 {
                     "pk": "learn.blitzbudget.com",
@@ -135,6 +136,16 @@ export default {
                 },
             ],
             blogposts: [
+                {
+                    "pk": "learn.blitzbudget.com",
+                    "sk": "content/coding/frontend/javascript/mastering-vanilla-javascript-ensuring-cross-browser-compatibility/mastering-vanilla-javascript-ensuring-cross-browser-compatibility.json",
+                    "Author": "Nagarjun Nagesh",
+                    "Category": "coding/frontend/javascript/mastering-vanilla-javascript-ensuring-cross-browser-compatibility",
+                    "creation_date": "2023-07-28T11:21:54Z",
+                    "FileURL": "coding/frontend/javascript/mastering-vanilla-javascript-ensuring-cross-browser-compatibility/mastering-vanilla-javascript-ensuring-cross-browser-compatibility",
+                    "Name": "Mastering Vanilla JavaScript: Ensuring Cross-Browser Compatibility",
+                    "Tags": "coding, frontend, javascript, mastering-vanilla-javascript-ensuring-cross-browser-compatibility"
+                },
                 {
                     "pk": "learn.blitzbudget.com",
                     "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows.json",
@@ -207,8 +218,9 @@ export default {
         },
         extractKeywordAndConstructURLs() {
             let filteredPosts = [];
+            let categoryName = this.fetchCategoryName().toLowerCase();
             this.blogposts.forEach((item) => {
-                if (item.Name.includes("Chapter ")) {
+                if (item.Name.includes("Chapter ") || item.Category.indexOf(categoryName) === -1) {
                     return
                 }
 
