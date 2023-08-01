@@ -152,7 +152,7 @@ export default {
                     .replace(/\-\-+/g, "-"); // Replace multiple consecutive hyphens with a single hyphen
             }
 
-            return `img/authors/${authorSlug}.jpg`
+            return `/img/authors/${authorSlug}.jpg`
         },
     },
     methods: {

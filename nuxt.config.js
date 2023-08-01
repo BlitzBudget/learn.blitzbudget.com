@@ -10,7 +10,7 @@ module.exports = {
     linkExactActiveClass: 'active',
   },
   head: {
-    titleTemplate: '%s BlitzBudget',
+    titleTemplate: 'Learn BlitzBudget',
     meta: [
       { charset: 'text/html; charset=utf-8' },
       { name: "author", content: "Nagarjun Nagesh" },

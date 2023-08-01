@@ -2,7 +2,7 @@
   <navbar position="fixed" :transparent="transparent" :color-on-scroll="colorOnScroll" menu-classes="ml-auto">
     <template slot-scope="{}">
       <nuxt-link v-popover:popover1 class="navbar-brand" to="/">
-        BlitzBudget Blog
+        Learn BlitzBudget
       </nuxt-link>
       <el-popover ref="popover1" popper-class="popover" placement="bottom" width="300" trigger="hover">
         <div class="popover-body">Created by BlitzBudget.</div>
@@ -11,10 +11,10 @@
     <template slot="navbar-menu">
       <ul class="navbar-nav mr-5">
         <li class="nav-item">
-          <nuxt-link class="nav-link" to="/personal-finance"> Personal Finance </nuxt-link>
+          <nuxt-link class="nav-link" to="/category/coding"> Coding </nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link class="nav-link" to="/psychology"> Psychology </nuxt-link>
+          <nuxt-link class="nav-link" to="/category/devops"> Devops </nuxt-link>
         </li>
       </ul>
       <li class="nav-item">

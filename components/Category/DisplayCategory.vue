@@ -1,13 +1,12 @@
 <template>
     <div class="wrapper blog-posts">
         <div class="page-header page-header-small rellax-header">
-            <div class="page-header-image" style="background-image: url('img/bg44.jpg')"></div>
+            <div class="page-header-image" :style="backgroundImageStyle"></div>
             <div class="content-center">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
                         <h2 class="title">
-                            A Place to discover more about ourselves and learn to live a
-                            meaningful life.
+                            {{ categoryName }}
                         </h2>
                     </div>
                 </div>
@@ -16,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 ml-auto mr-auto">
-                    <h2 class="title">Psychology</h2><br />
+                    <h2 class="title">{{ categoryName }}</h2><br />
                     <card type="blog" plain v-for="post in blogposts" :key="post.url">
                         <div class="row">
                             <div class="col-md-4">
@@ -33,7 +32,7 @@
                                         Read
                                         More </nuxt-link>
                                 </p>
-                                <div class="author"><img v-lazy="'img/authors/nagarjun.jpg'" alt="..."
+                                <div class="author"><img v-lazy="post.AuthorURL" :alt="post.Author"
                                         class="avatar img-raised"><span>{{ post.Author }}</span></div>
                             </div>
                         </div>
@@ -47,77 +46,30 @@
                     <h3 class="title text-center">You may also be interested in</h3>
                     <br />
                     <div class="row">
-                        <div class="col-md-4">
-                            <card type="blog" plain>
-                                <img slot="image" class="img rounded img-raised"
-                                    src="img/personal-finance/power-of-dreaming.jpg" alt="Dream" />
-                                <h6 class="category text-info">Personal Finance</h6>
-                                <h4 class="card-title">
-                                    <nuxt-link to="/personal-finance/power-of-dreaming/">The Power of Dreaming</nuxt-link>
-                                </h4>
-                                <p class="card-description">
-                                    It all starts with a dream to become successful in life. The
-                                    dream has to be justified with a definiteness of purpose. The
-                                    purpose then drives us to plan and to take action.
-                                    <nuxt-link to="/personal-finance/power-of-dreaming/"> Read More </nuxt-link>
-                                </p>
-                                <div class="author">
-                                    <img v-lazy="'img/authors/nagarjun.jpg'" alt="..." class="avatar img-raised" />
-                                    <span>Nagarjun</span>
-                                </div>
-                            </card>
-                        </div>
-                        <div class="col-md-4">
-                            <card type="blog" plain>
-                                <img slot="image" class="img rounded img-raised"
-                                    src="img/personal-finance/are-you-rich-if-you-own-a-bmw.jpg" alt="BMW" />
-                                <h6 class="category text-success">Personal Finance</h6>
-                                <h4 class="card-title">
-                                    <nuxt-link to="/personal-finance/are-you-rich-if-you-own-a-bmw/">Are you Rich if you own
-                                        a BMW?
-                                    </nuxt-link>
-                                </h4>
-                                <p class="card-description">
-                                    The majority of millionaires own their cars rather than lease.
-                                    Approximately 1 in 4 hold the current years model but another
-                                    25 % have a model that is a four-year-old model.
-                                    <nuxt-link to="/personal-finance/are-you-rich-if-you-own-a-bmw/">
-                                        Read More
-                                    </nuxt-link>
-                                </p>
-                                <div class="author">
-                                    <img v-lazy="'img/authors/nagarjun.jpg'" alt="..." class="avatar img-raised" />
-                                    <span>Nagarjun</span>
-                                </div>
-                            </card>
-                        </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4" v-for="post in previewBlogs" :key="post.FileURL">
                             <div class="card card-plain card-blog">
                                 <div class="card-image">
-                                    <nuxt-link to="/psychology/the-truth-about-white-lies/">
-                                        <img class="img rounded img-raised" src="img/psychology/bg18.jpg" alt="Lies" />
+                                    <nuxt-link :to="post.FileURL">
+                                        <img class="img rounded img-raised" :src="post.ImageURL" :alt="post.Name" />
                                     </nuxt-link>
                                 </div>
                                 <div class="card-body">
                                     <h6 class="category text-danger">
-                                        <em class="now-ui-icons media-2_sound-wave"></em> Psychology
+                                        <em class="now-ui-icons media-2_sound-wave"></em> {{ post.Tags }}
                                     </h6>
                                     <h4 class="card-title">
-                                        <nuxt-link to="/psychology/the-truth-about-white-lies/">The Truth about White
-                                            Lies</nuxt-link>
+                                        <nuxt-link :to="post.FileURL">{{ post.Name }}</nuxt-link>
                                     </h4>
                                     <p class="card-description">
-                                        Once we establish ourselves as a person who would not shy
-                                        away from saying white lies as long as we get what we
-                                        want/prevent bad things from happening by telling the truth.
-                                        <nuxt-link to="/psychology/the-truth-about-white-lies/">
+                                        {{ post.Name }}
+                                        <nuxt-link :to="post.FileURL">
                                             Read More
                                         </nuxt-link>
                                     </p>
 
                                     <div class="author">
-                                        <img v-lazy="'img/authors/nagarjun.jpg'" alt="..." class="avatar img-raised" />
-                                        <span>Nagarjun</span>
+                                        <img v-lazy="post.AuthorURL" :alt="post.Author" class="avatar img-raised"><span>{{
+                                            post.Author }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -132,11 +84,8 @@
 import { Card, Button, FormGroupInput } from "@/components";
 import initParallax from "@/utils/initParallax";
 export default {
-    name: "blog-posts",
+    name: "category",
     layout: "default",
-    head: {
-        title: 'Psychology',
-    },
     components: {
         Card,
         [Button.name]: Button,
@@ -145,16 +94,20 @@ export default {
     data() {
         return {
             year: new Date().getFullYear(),
-            blogposts: [
+            imageURL: "/img/coding/bg-1.jpg",
+            categoryName: null,
+            previewBlogs: [
                 {
                     "pk": "learn.blitzbudget.com",
                     "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows.json",
                     "Author": "Nagarjun Nagesh",
                     "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
                     "creation_date": "2023-07-28T11:21:57Z",
-                    "File": "",
+                    "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows",
+                    "ImageURL": "/img/devops/bg-1.jpg",
+                    "AuthorURL": "/img/authors/nagarjun-nagesh.jpg",
                     "Name": "Mastering Infrastructure Deployment with AWS CloudFormation and GitHub Workflows",
-                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
                 },
                 {
                     "pk": "learn.blitzbudget.com",
@@ -162,7 +115,9 @@ export default {
                     "Author": "Nagarjun Nagesh",
                     "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
                     "creation_date": "2023-07-28T11:21:57Z",
-                    "File": "",
+                    "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-9-linking-the-api-domain-name-with-route-53",
+                    "ImageURL": "/img/devops/bg-2.jpg",
+                    "AuthorURL": "/img/authors/nagarjun-nagesh.jpg",
                     "Name": "Chapter 9: Linking the API Domain Name with Route 53",
                     "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
                 },
@@ -172,7 +127,41 @@ export default {
                     "Author": "Nagarjun Nagesh",
                     "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
                     "creation_date": "2023-07-28T11:21:57Z",
-                    "File": "",
+                    "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-8-linking-the-api-domain-name-with-an-http-certificate",
+                    "ImageURL": "/img/devops/bg-3.jpg",
+                    "AuthorURL": "/img/authors/nagarjun-nagesh.jpg",
+                    "Name": "Chapter 8: Linking the API Domain Name with an HTTP Certificate",
+                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                },
+            ],
+            blogposts: [
+                {
+                    "pk": "learn.blitzbudget.com",
+                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows.json",
+                    "Author": "Nagarjun Nagesh",
+                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
+                    "creation_date": "2023-07-28T11:21:57Z",
+                    "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows",
+                    "Name": "Mastering Infrastructure Deployment with AWS CloudFormation and GitHub Workflows",
+                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
+                },
+                {
+                    "pk": "learn.blitzbudget.com",
+                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-9-linking-the-api-domain-name-with-route-53.json",
+                    "Author": "Nagarjun Nagesh",
+                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
+                    "creation_date": "2023-07-28T11:21:57Z",
+                    "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-9-linking-the-api-domain-name-with-route-53",
+                    "Name": "Chapter 9: Linking the API Domain Name with Route 53",
+                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                },
+                {
+                    "pk": "learn.blitzbudget.com",
+                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-8-linking-the-api-domain-name-with-an-http-certificate.json",
+                    "Author": "Nagarjun Nagesh",
+                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
+                    "creation_date": "2023-07-28T11:21:57Z",
+                    "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-8-linking-the-api-domain-name-with-an-http-certificate",
                     "Name": "Chapter 8: Linking the API Domain Name with an HTTP Certificate",
                     "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
                 },
@@ -182,16 +171,26 @@ export default {
                     "Author": "Nagarjun Nagesh",
                     "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
                     "creation_date": "2023-07-28T11:21:57Z",
-                    "File": "",
+                    "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-7-generating-a-certificate-in-us-east-1-for-the-domain",
                     "Name": "Chapter 7: Generating a Certificate in us-east-1 for the Domain",
                     "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
                 }
             ]
         };
     },
-    mounted() {
+    async mounted() {
         initParallax();
         this.setHeaders();
+        await this.fetchMarkdownContent();
+        this.categoryName = this.fetchCategoryName();
+    },
+    computed: {
+        backgroundImageStyle() {
+            // Computed property to generate the background-image style
+            return {
+                'background-image': `url(${this.imageURL})`,
+            };
+        },
     },
     methods: {
         async fetchMarkdownContent() {
@@ -208,13 +207,14 @@ export default {
         },
         extractKeywordAndConstructURLs() {
             this.blogposts.forEach((item) => {
-                this.extractKeywordAndConstructURL(item)
+                item.ImageURL = this.extractKeywordAndConstructURL(item)
+                item.AuthorURL = this.fetchAuthorImageUrl(item)
                 item.FileURL = this.formatSk(item.sk)
             });
         },
         formatSk(sk) {
             // Remove "/content" and ".json" from the sk string
-            return sk.replace(/^content\/|\.json$/g, '');
+            return "/" + sk.replace(/^content\/|\.json$/g, '');
         },
         extractKeywordAndConstructURL(blogPost) {
             // Split the URL by slashes to get individual parts
@@ -227,7 +227,19 @@ export default {
             const random = Math.floor(Math.random() * 125) + 1;
 
             // Construct the new URL
-            blogPost.ImageURL = `img/${this.fetchedKeyword}/bg-${random}.jpg`;
+            return `/img/${this.fetchedKeyword}/bg-${random}.jpg`;
+        },
+        fetchAuthorImageUrl(blogPost) {
+            let authorSlug = "nagarjun-nagesh";
+            if (blogPost.author) {
+                authorSlug = this.blogPost.author
+                    .toLowerCase()
+                    .replace(/\s+/g, "-") // Replace spaces with hyphens
+                    .replace(/[^\w\-]+/g, "") // Remove all non-word characters except hyphens
+                    .replace(/\-\-+/g, "-"); // Replace multiple consecutive hyphens with a single hyphen
+            }
+
+            return `/img/authors/${authorSlug}.jpg`
         },
         formattedTags() {
             // The original string
@@ -236,8 +248,8 @@ export default {
             // Remove the leading slash and split the string into an array using "/"
             const tagArray = originalString.substring(1).split("/");
 
-            // Join the array elements with ", "
-            const formattedString = tagArray.join(", ");
+            // Exclude the first element ("category") and join the array elements with ", "
+            const formattedString = tagArray.slice(1).join(", ")
 
             return formattedString;
         },
@@ -249,27 +261,27 @@ export default {
             const tagArray = originalString.substring(1).split("/");
 
             // Get the first part of the URL
-            this.fetchedKeyword = tagArray[0];
+            this.fetchedKeyword = tagArray[1];
 
             // Generate a random number between 1 and 125
             const random = Math.floor(Math.random() * 125) + 1;
 
             // Construct the new URL
-            return `img/${this.fetchedKeyword}/bg-${random}.jpg`;
+            return `/img/${this.fetchedKeyword}/bg-${random}.jpg`;
         },
         fetchCategoryName() {
             // The original string
             const originalString = this.$route.fullPath;
-
             // Remove the leading slash and split the string into an array using "/"
             const tagArray = originalString.substring(1).split("/");
+            const categoryName = tagArray[1].charAt(0).toUpperCase() + tagArray[1].slice(1)
 
             // Get the first part of the URL
-            return tagArray[0];
+            return categoryName;
         },
         setHeaders() {
             // Generate dynamic meta tags based on the fetched data
-            const canonicalUrl = `https://learn.blitzbudget.com/${this.$route.fullPath}`;
+            const canonicalUrl = process.env.BASE_URL + `/${this.$route.fullPath}`;
             const tags = this.formattedTags()
             const imageURL = this.extractCategoryImageURL();
             const categoryName = this.fetchCategoryName()
