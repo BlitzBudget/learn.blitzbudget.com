@@ -56,8 +56,10 @@
                             <div class="col-md-6">
                                 <div class="blog-tags">
                                     Tags:
-                                    <span class="label label-success"><nuxt-link :to="categoryURL">{{ blogPost.tags
-                                    }}</nuxt-link></span>
+                                    <span class="label label-success" v-for="post in fetchTagsAndURL"
+                                        :key="post.tag"><nuxt-link :to="post.url">#{{
+                                            post.tag
+                                        }} </nuxt-link></span>
                                 </div>
                             </div>
                             <div class="col-md-6"></div>
@@ -69,7 +71,7 @@
                                     <div class="col-md-2">
                                         <div class="card-avatar">
                                             <nuxt-link to="/category/coding/">
-                                                <img class="img img-raised" :src="fetchAuthorImageUrl" alt="author" />
+                                                <img class="img img-raised" v-lazy="fetchAuthorImageUrl" alt="author" />
                                             </nuxt-link>
                                             <div class="ripple-container"></div>
                                         </div>
@@ -84,7 +86,7 @@
                                         </p>
                                     </div>
                                     <div class="col-md-2">
-                                        <button type="button" class="btn btn-default pull-right btn-round">
+                                        <button type="button" class="btn btn-default pull-right btn-round" disabled>
                                             Follow
                                         </button>
                                     </div>
@@ -157,6 +159,10 @@ export default {
 
             return `/img/authors/${authorSlug}.jpg`
         },
+        fetchTagsAndURL() {
+            console.log(this.blogPost.tags)
+            return this.createTagObjectArray(this.blogPost.tags);
+        }
     },
     methods: {
         fetchCategoryName() {
@@ -244,6 +250,22 @@ export default {
 
             console.log(firstSentence); // Output the first sentence of the content
             return firstSentence
+        },
+        createTagObjectArray(tags) {
+            const tagArray = tags?.split(', ');
+
+            let url = '/category';
+            const tagObjectArray = tagArray.map((tag) => {
+                url += `/${tag}`;
+                return {
+                    tag,
+                    url,
+                };
+            });
+
+            // Remove the last element
+            tagObjectArray.pop();
+            return tagObjectArray;
         }
     },
 };

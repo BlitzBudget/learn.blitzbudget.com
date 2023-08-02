@@ -50,7 +50,7 @@
                             <div class="card card-plain card-blog">
                                 <div class="card-image">
                                     <nuxt-link :to="post.FileURL">
-                                        <img class="img rounded img-raised" :src="post.ImageURL" :alt="post.Name" />
+                                        <img class="img rounded img-raised" v-lazy="post.ImageURL" :alt="post.Name" />
                                     </nuxt-link>
                                 </div>
                                 <div class="card-body">

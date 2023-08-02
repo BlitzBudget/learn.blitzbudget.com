@@ -11,7 +11,7 @@
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div class="card-image">
-                                            <img class="img img-raised rounded" :src="nextImageURL"
+                                            <img class="img img-raised rounded" v-lazy="nextImageURL"
                                                 :alt="fetchNextBlog.Name" />
                                         </div>
                                     </div>
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="col-md-5">
                                     <div class="card-image">
-                                        <img class="img img-raised rounded" :src="previousImageURL"
+                                        <img class="img img-raised rounded" v-lazy="previousImageURL"
                                             :alt="fetchPreviousBlog.Name" />
                                     </div>
                                 </div>
