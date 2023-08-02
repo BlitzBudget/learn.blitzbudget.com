@@ -11,21 +11,22 @@
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div class="card-image">
-                                            <img class="img img-raised rounded" :src="nextImageURL" :alt="nextBlog.Name" />
+                                            <img class="img img-raised rounded" :src="nextImageURL"
+                                                :alt="fetchNextBlog.Name" />
                                         </div>
                                     </div>
                                     <div class="col-md-7">
-                                        <h6 class="category text-info">{{ nextBlog.Tags }}</h6>
+                                        <h6 class="category text-info">{{ fetchNextBlog.Tags }}</h6>
                                         <h3 class="card-title">
-                                            <nuxt-link :to="nextBlog.FileURL">{{ nextBlog.Name }}
+                                            <nuxt-link :to="fetchNextBlog.FileURL">{{ fetchNextBlog.Name }}
                                             </nuxt-link>
                                         </h3>
                                         <p class="card-description">
-                                            {{ nextBlog.Name }}....
+                                            {{ fetchNextBlog.Name }}....
                                         </p>
                                         <p class="author">
                                             by
-                                            <strong>{{ nextBlog.Author }}</strong> , {{ nextBlog.creation_date }}
+                                            <strong>{{ fetchNextBlog.Author }}</strong> , {{ fetchNextBlog.creation_date }}
                                         </p>
                                     </div>
                                 </div>
@@ -36,24 +37,24 @@
                                 <div class="col-md-7">
                                     <h6 class="category text-danger">
                                         <em class="now-ui-icons now-ui-icons media-2_sound-wave"></em>
-                                        {{ previousBlog.Tags }}
+                                        {{ fetchPreviousBlog.Tags }}
                                     </h6>
                                     <h3 class="card-title">
-                                        <nuxt-link :to="previousBlog.FileURL">{{ previousBlog.Name }}
+                                        <nuxt-link :to="fetchPreviousBlog.FileURL">{{ fetchPreviousBlog.Name }}
                                         </nuxt-link>
                                     </h3>
                                     <p class="card-description">
-                                        {{ previousBlog.Name }}.....
+                                        {{ fetchPreviousBlog.Name }}.....
                                     </p>
                                     <p class="author">
                                         by
-                                        <strong>{{ previousBlog.Author }}</strong> , {{ previousBlog.creation_date }}
+                                        <strong>{{ fetchPreviousBlog.Author }}</strong> , {{ fetchPreviousBlog.creation_date }}
                                     </p>
                                 </div>
                                 <div class="col-md-5">
                                     <div class="card-image">
                                         <img class="img img-raised rounded" :src="previousImageURL"
-                                            :alt="previousBlog.Name" />
+                                            :alt="fetchPreviousBlog.Name" />
                                     </div>
                                 </div>
                             </div>
@@ -91,13 +92,13 @@ export default {
                 },
                 {
                     "pk": "learn.blitzbudget.com",
-                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-9-linking-the-api-domain-name-with-route-53.json",
+                    "sk": "content/coding/backend/serverless/golang/golang-fundamentals/golang-fundamentals-a-comprehensive-guide-to-go-programming.json",
                     "Author": "Nagarjun Nagesh",
-                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
-                    "creation_date": "2023-07-28T11:21:57Z",
+                    "Category": "coding/backend/serverless/golang/golang-fundamentals",
+                    "creation_date": "2023-07-28T11:21:51Z",
                     "File": "",
-                    "Name": "Chapter 9: Linking the API Domain Name with Route 53",
-                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                    "Name": "Golang Fundamentals: A Comprehensive Guide to Go Programming",
+                    "Tags": "coding, backend, serverless, golang, golang-fundamentals"
                 },
                 {
                     "pk": "learn.blitzbudget.com",
@@ -143,6 +144,14 @@ export default {
             previousImageURL: "/img/coding/bg-2.jpg"
         };
     },
+    computed: {
+        fetchNextBlog() {
+            return this.nextBlog;
+        },
+        fetchPreviousBlog() {
+            return this.previousBlog;
+        }
+    },
     methods: {
         async fetchMarkdownContent() {
             const fetchIndexUrl = '/content/index.json';
@@ -157,17 +166,6 @@ export default {
             this.fetchRelatedBlogs();
             this.nextImageURL = this.extractKeywordAndConstructURL(this.nextBlog);
             this.previousImageURL = this.extractKeywordAndConstructURL(this.previousBlog);
-            await this.fetchBlogContentForDescription(this.nextBlog.sk)
-            await this.fetchBlogContentForDescription(this.previousBlog.sk)
-        },
-        async fetchBlogContentForDescription(blogURL) {
-            await this.$axios.get(blogURL)
-                .then((response) => {
-                    console.log(response)
-                })
-                .catch((error) => {
-                    console.error('Error fetching content:', error);
-                });
         },
         fetchRelatedBlogs() {
             const url = this.removeStartingSlash(this.$route.fullPath)

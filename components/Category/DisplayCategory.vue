@@ -46,7 +46,7 @@
                     <h3 class="title text-center">You may also be interested in</h3>
                     <br />
                     <div class="row">
-                        <div class="col-md-4" v-for="post in previewBlogs" :key="post.FileURL">
+                        <div class="col-md-4" v-for="post in fetchPreviewBlogs" :key="post.FileURL">
                             <div class="card card-plain card-blog">
                                 <div class="card-image">
                                     <nuxt-link :to="post.FileURL">
@@ -112,27 +112,27 @@ export default {
                 },
                 {
                     "pk": "learn.blitzbudget.com",
-                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-9-linking-the-api-domain-name-with-route-53.json",
+                    "sk": "content/coding/backend/serverless/golang/golang-fundamentals/golang-fundamentals-a-comprehensive-guide-to-go-programming.json",
                     "Author": "Nagarjun Nagesh",
-                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
-                    "creation_date": "2023-07-28T11:21:57Z",
-                    "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-9-linking-the-api-domain-name-with-route-53",
-                    "ImageURL": "/img/devops/bg-2.jpg",
+                    "Category": "coding/backend/serverless/golang/golang-fundamentals",
+                    "creation_date": "2023-07-28T11:21:51Z",
+                    "FileURL": "coding/backend/serverless/golang/golang-fundamentals/golang-fundamentals-a-comprehensive-guide-to-go-programming",
+                    "ImageURL": "/img/devops/bg-3.jpg",
                     "AuthorURL": "/img/authors/nagarjun-nagesh.jpg",
-                    "Name": "Chapter 9: Linking the API Domain Name with Route 53",
-                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                    "Name": "Golang Fundamentals: A Comprehensive Guide to Go Programming",
+                    "Tags": "coding, backend, serverless, golang, golang-fundamentals"
                 },
                 {
                     "pk": "learn.blitzbudget.com",
-                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-8-linking-the-api-domain-name-with-an-http-certificate.json",
+                    "sk": "content/coding/backend/serverless/nodejs/nodejs-fundamanetals/nodejs-fundamentals-unleashing-the-power-of-nodejs-development.json",
                     "Author": "Nagarjun Nagesh",
-                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
-                    "creation_date": "2023-07-28T11:21:57Z",
-                    "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-8-linking-the-api-domain-name-with-an-http-certificate",
-                    "ImageURL": "/img/devops/bg-3.jpg",
+                    "Category": "coding/backend/serverless/nodejs/nodejs-fundamanetals",
+                    "creation_date": "2023-07-28T11:21:52Z",
+                    "FileURL": "coding/backend/serverless/nodejs/nodejs-fundamanetals/nodejs-fundamentals-unleashing-the-power-of-nodejs-development",
+                    "ImageURL": "/img/devops/bg-2.jpg",
                     "AuthorURL": "/img/authors/nagarjun-nagesh.jpg",
-                    "Name": "Chapter 8: Linking the API Domain Name with an HTTP Certificate",
-                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+                    "Name": "Nodejs Fundamentals: Unleashing the Power of Nodejs Development",
+                    "Tags": "coding, backend, serverless, nodejs, nodejs-fundamanetals"
                 },
             ],
             blogposts: [
@@ -202,6 +202,9 @@ export default {
                 'background-image': `url(${this.imageURL})`,
             };
         },
+        fetchPreviewBlogs() {
+            return this.previewBlogs;
+        }
     },
     methods: {
         async fetchMarkdownContent() {
@@ -218,19 +221,27 @@ export default {
         },
         extractKeywordAndConstructURLs() {
             let filteredPosts = [];
+            let appendPreviewBlogs = [];
             let categoryName = this.fetchCategoryName().toLowerCase();
             this.blogposts.forEach((item) => {
-                if (item.Name.includes("Chapter ") || item.Category.indexOf(categoryName) === -1) {
-                    return
-                }
-
                 item.ImageURL = this.extractKeywordAndConstructURL(item)
                 item.AuthorURL = this.fetchAuthorImageUrl(item)
                 item.FileURL = this.formatSk(item.sk)
+
+                if (item.Name.includes("Chapter ")) {
+                    return
+                } else if (item.Category.indexOf(categoryName) === -1) {
+                    appendPreviewBlogs.push(item)
+                    return
+                }
+
+                // Add Filtered Posts
                 filteredPosts.push(item)
             });
 
-            this.blogposts = filteredPosts
+            this.blogposts = filteredPosts;
+            // Append Preview Blogs
+            this.previewBlogs = appendPreviewBlogs
         },
         formatSk(sk) {
             // Remove "/content" and ".json" from the sk string

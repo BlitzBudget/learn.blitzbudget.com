@@ -213,27 +213,27 @@ export default {
         },
         {
           "pk": "learn.blitzbudget.com",
-          "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-9-linking-the-api-domain-name-with-route-53.json",
+          "sk": "content/coding/backend/serverless/golang/golang-fundamentals/golang-fundamentals-a-comprehensive-guide-to-go-programming.json",
           "Author": "Nagarjun Nagesh",
-          "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
-          "creation_date": "2023-07-28T11:21:57Z",
-          "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-9-linking-the-api-domain-name-with-route-53",
-          "ImageURL": "/img/devops/bg-2.jpg",
+          "Category": "coding/backend/serverless/golang/golang-fundamentals",
+          "creation_date": "2023-07-28T11:21:51Z",
+          "FileURL": "coding/backend/serverless/golang/golang-fundamentals/golang-fundamentals-a-comprehensive-guide-to-go-programming",
+          "ImageURL": "/img/devops/bg-3.jpg",
           "AuthorURL": "/img/authors/nagarjun-nagesh.jpg",
-          "Name": "Chapter 9: Linking the API Domain Name with Route 53",
-          "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+          "Name": "Golang Fundamentals: A Comprehensive Guide to Go Programming",
+          "Tags": "coding, backend, serverless, golang, golang-fundamentals"
         },
         {
           "pk": "learn.blitzbudget.com",
-          "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-8-linking-the-api-domain-name-with-an-http-certificate.json",
+          "sk": "content/coding/backend/serverless/nodejs/nodejs-fundamanetals/nodejs-fundamentals-unleashing-the-power-of-nodejs-development.json",
           "Author": "Nagarjun Nagesh",
-          "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
-          "creation_date": "2023-07-28T11:21:57Z",
-          "FileURL": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-8-linking-the-api-domain-name-with-an-http-certificate",
-          "ImageURL": "/img/devops/bg-3.jpg",
+          "Category": "coding/backend/serverless/nodejs/nodejs-fundamanetals",
+          "creation_date": "2023-07-28T11:21:52Z",
+          "FileURL": "coding/backend/serverless/nodejs/nodejs-fundamanetals/nodejs-fundamentals-unleashing-the-power-of-nodejs-development",
+          "ImageURL": "/img/devops/bg-2.jpg",
           "AuthorURL": "/img/authors/nagarjun-nagesh.jpg",
-          "Name": "Chapter 8: Linking the API Domain Name with an HTTP Certificate",
-          "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
+          "Name": "Nodejs Fundamentals: Unleashing the Power of Nodejs Development",
+          "Tags": "coding, backend, serverless, nodejs, nodejs-fundamanetals"
         },
       ],
     };
