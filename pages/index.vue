@@ -198,6 +198,7 @@ export default {
   data() {
     return {
       year: new Date().getFullYear(),
+      blogposts: [],
       previewBlogs: [
         {
           "pk": "learn.blitzbudget.com",
@@ -238,9 +239,102 @@ export default {
       ],
     };
   },
-  mounted() {
+  async mounted() {
     initParallax();
+    await this.fetchIndex();
   },
+  methods: {
+    async fetchIndex() {
+      const fetchIndexUrl = '/content/index.json';
+      await this.$axios.get(fetchIndexUrl)
+        .then((response) => {
+          this.blogposts = response.data;
+        })
+        .catch((error) => {
+          console.error('Error fetching content:', error);
+        });
+
+      this.extractKeywordAndConstructURLs();
+    },
+    extractKeywordAndConstructURLs() {
+      let filteredPosts = [];
+      this.blogposts.forEach((item) => {
+        item.ImageURL = this.extractKeywordAndConstructURL(item)
+        item.AuthorURL = this.fetchAuthorImageUrl(item)
+        item.FileURL = this.formatSk(item.sk)
+
+        if (item.Name.includes("Chapter ")) {
+          return
+        }
+        // Add Filtered Posts
+        filteredPosts.push(item)
+      });
+
+      // Append Preview Blogs
+      this.previewBlogs = filteredPosts
+    },
+    formatSk(sk) {
+      // Remove "/content" and ".json" from the sk string
+      return "/" + sk.replace(/^content\/|\.json$/g, '');
+    },
+    extractKeywordAndConstructURL(blogPost) {
+      // Split the URL by slashes to get individual parts
+      const parts = blogPost.Category.split("/");
+
+      // Get the first part of the URL
+      this.fetchedKeyword = parts[0];
+
+      // Generate a random number between 1 and 125
+      const random = Math.floor(Math.random() * 125) + 1;
+
+      // Construct the new URL
+      return `/img/${this.fetchedKeyword}/bg-${random}.jpg`;
+    },
+    fetchAuthorImageUrl(blogPost) {
+      let authorSlug = "nagarjun-nagesh";
+      if (blogPost.author) {
+        authorSlug = this.blogPost.author
+          .toLowerCase()
+          .replace(/\s+/g, "-") // Replace spaces with hyphens
+          .replace(/[^\w\-]+/g, "") // Remove all non-word characters except hyphens
+          .replace(/\-\-+/g, "-"); // Replace multiple consecutive hyphens with a single hyphen
+      }
+
+      return `/img/authors/${authorSlug}.jpg`
+    },
+    setHeaders() {
+      // Generate dynamic meta tags based on the fetched data
+      const canonicalUrl = process.env.BASE_URL + `/`;
+      const description = "Learn programming, personal finance, psychology and much more";
+      const imageURL = "/img/psychology/bg-1.jpg";
+      const tags = "coding, devops, frontend, personal finance";
+
+      // Set the meta tags dynamically on the client-side
+      this.$nuxt.$options.head = () => ({
+        title: categoryName || 'Learn BlitzBudget',
+        meta: [
+          { hid: 'description', name: 'description', content: description },
+          { hid: 'keywords', name: 'keywords', content: tags },
+          { name: 'author', content: 'Nagarjun Nagesh' },
+          { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+          { hid: 'og:title', property: 'og:title', content: "Learn BlitzBudget" },
+          { hid: 'og:description', property: 'og:description', content: description },
+          { hid: 'og:image', property: 'og:image', content: imageURL },
+          { hid: 'og:url', property: 'og:url', content: canonicalUrl },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:title', content: categoryName },
+          { name: 'twitter:description', content: tags },
+          { name: 'twitter:image', content: imageURL },
+          { name: 'robots', content: 'index,follow' },
+          { 'http-equiv': 'expires', content: 'Fri, 01 Jan 2023 00:00:00 GMT' },
+          { 'http-equiv': 'content-language', content: 'en' }
+        ],
+        link: [
+          { rel: 'canonical', href: canonicalUrl }
+        ],
+      });
+    },
+  }
 };
 </script>
 <style></style>
