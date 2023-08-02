@@ -1,4 +1,4 @@
-**Introduction to Java Collections Framework: Understanding Java's Collection Hierarchy and Interfaces**
+# Chapter 16: **Introduction to Java Collections Framework: Understanding Java's Collection Hierarchy and Interfaces**
 
 The Java Collections Framework is a fundamental part of the Java Standard Library that provides a comprehensive set of classes and interfaces for working with collections of objects. Collections are data structures used to store, retrieve, and manipulate groups of elements. The Collections Framework simplifies the process of managing data by offering a unified and consistent API for various types of collections. In this blog post, we will explore the Java Collections Framework, understand its hierarchy, and dive into its key interfaces and classes through practical examples.
 

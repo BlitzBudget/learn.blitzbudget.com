@@ -1,4 +1,4 @@
-**Classes and Objects: Creating Classes, Instantiating Objects, and Using Constructors in Java**
+# Chapter 10: **Classes and Objects: Creating Classes, Instantiating Objects, and Using Constructors in Java**
 
 Classes and objects are fundamental concepts in Java and form the basis of Object-Oriented Programming (OOP). Understanding how to create classes, instantiate objects, and use constructors is essential for building robust and organized Java applications. In this comprehensive blog post, we will explore classes and objects in depth, learning how to define classes, create objects, and use constructors effectively. Through practical examples, we will demonstrate the power and versatility of classes and objects in Java.
 

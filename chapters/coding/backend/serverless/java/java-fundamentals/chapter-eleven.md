@@ -1,4 +1,4 @@
-**Working with Strings: Exploring Various String Manipulation Techniques and Functions in Java**
+# Chapter 11: **Working with Strings: Exploring Various String Manipulation Techniques and Functions in Java**
 
 Strings are one of the most common data types in Java and play a crucial role in programming. They represent sequences of characters and are used extensively for text processing and manipulation. In this comprehensive blog post, we will dive deep into working with strings in Java, exploring various string manipulation techniques and functions. Through practical examples, we will learn how to concatenate strings, extract substrings, search and replace text, and perform other essential string operations.
 

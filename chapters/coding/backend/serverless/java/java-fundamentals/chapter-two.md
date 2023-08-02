@@ -1,4 +1,4 @@
-**Setting up Java Development Environment: Step-by-Step Guide**
+# **Chapter 2: Setting up Java Development Environment: Step-by-Step Guide**
 
 Java, being one of the most widely used programming languages, provides developers with a robust and versatile platform to build a wide range of applications, from desktop software to web and mobile applications. To begin your journey as a Java developer, you need to set up a Java Development Environment on your system. In this comprehensive step-by-step guide, we will walk you through the process of installing and configuring Java on different operating systems, and provide practical Java examples to help you get started.
 

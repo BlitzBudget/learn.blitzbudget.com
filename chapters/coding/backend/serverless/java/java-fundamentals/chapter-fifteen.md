@@ -1,4 +1,4 @@
-**Java Standard Library: Overview of the Powerful Java Standard Library and its Key Components**
+# Chapter 15: **Java Standard Library: Overview of the Powerful Java Standard Library and its Key Components**
 
 The Java Standard Library, also known as the Java Class Library or the Java API (Application Programming Interface), is an extensive collection of classes and interfaces that comes bundled with the Java Development Kit (JDK). It provides a wide range of pre-built functionality to simplify and accelerate Java application development. The Java Standard Library covers everything from fundamental data structures and utility classes to advanced networking and GUI components. In this comprehensive blog post, we will explore the key components of the Java Standard Library, understand their significance, and demonstrate how to leverage their power through practical examples.
 

@@ -1,4 +1,4 @@
-**Blog Title: "Java Fundamentals: Mastering the Basics"**
+**Java Fundamentals: Mastering the Basics**
 
 1. **Introduction to Java:** A brief history of Java and its significance in modern programming.
 

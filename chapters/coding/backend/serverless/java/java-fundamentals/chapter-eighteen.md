@@ -1,4 +1,4 @@
-**Multithreading in Java: Exploring Concurrent Programming using Threads in Java**
+# Chapter 18: **Multithreading in Java: Exploring Concurrent Programming using Threads in Java**
 
 Multithreading is a powerful concept that allows programs to execute multiple threads concurrently, making the best use of modern multi-core processors. In Java, multithreading is achieved through the use of threads, which are lightweight subprocesses that share the same resources but can execute independently. In this blog post, we will delve into the world of multithreading in Java, understand the basics of creating and managing threads, explore synchronization and thread safety, and demonstrate various threading techniques with practical examples.
 

@@ -1,4 +1,4 @@
-**File Handling in Java: Reading and Writing Files Using Java's File I/O Capabilities**
+# Chapter 13: **File Handling in Java: Reading and Writing Files Using Java's File I/O Capabilities**
 
 File handling is a fundamental aspect of any programming language, and Java provides robust file I/O capabilities to interact with files on the file system. Whether you need to read data from a file, write data to a file, or manipulate files in various ways, Java's file handling features have got you covered. In this comprehensive blog post, we will explore the ins and outs of file handling in Java, learning how to read and write files, create directories, traverse file systems, and much more. Through practical examples, we will demonstrate the power and versatility of Java's file I/O capabilities.
 

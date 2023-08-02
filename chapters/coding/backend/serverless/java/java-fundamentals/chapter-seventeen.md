@@ -1,4 +1,4 @@
-**Generics in Java: Mastering the Concept of Generics and How They Enhance Type Safety**
+# Chapter 17: **Generics in Java: Mastering the Concept of Generics and How They Enhance Type Safety**
 
 Java Generics is a powerful feature introduced in Java 5 that brings type safety and flexibility to the language. Generics allow developers to create classes, interfaces, and methods that can work with different types while ensuring type safety at compile-time. In this blog post, we will delve into the concept of generics, explore how they enhance type safety, and demonstrate their usage with practical examples.
 

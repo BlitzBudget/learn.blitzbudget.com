@@ -1,4 +1,4 @@
-**Understanding Java Syntax: Exploring Java's Basic Syntax and Structure of a Simple Program**
+# Chapter 3: **Understanding Java Syntax: Exploring Java's Basic Syntax and Structure of a Simple Program**
 
 Java, as a popular and powerful programming language, owes much of its success to its simple and straightforward syntax. Whether you are a beginner taking your first steps in programming or an experienced developer exploring Java for the first time, understanding Java's syntax is essential to writing clean, efficient, and maintainable code. In this comprehensive blog post, we will delve into the basic syntax of Java, explain key concepts, and provide practical examples to help you grasp the fundamentals of the language.
 

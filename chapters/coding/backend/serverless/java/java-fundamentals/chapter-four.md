@@ -1,4 +1,4 @@
-**Variables and Data Types: Dive into Java's Data Types and Learn How to Work with Variables**
+# Chapter 4: **Variables and Data Types: Dive into Java's Data Types and Learn How to Work with Variables**
 
 Variables and data types are fundamental concepts in programming that allow us to store and manipulate data. In Java, a versatile and widely-used programming language, understanding data types and variables is essential for building robust and efficient applications. In this comprehensive blog post, we will explore Java's data types, learn how to declare and initialize variables, and dive into examples to solidify our understanding.
 

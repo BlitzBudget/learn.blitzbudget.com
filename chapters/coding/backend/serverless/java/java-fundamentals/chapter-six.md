@@ -1,4 +1,4 @@
-**Control Flow Statements: Learn About Conditional Statements and Loops to Control Program Flow**
+# Chapter 6: **Control Flow Statements: Learn About Conditional Statements and Loops to Control Program Flow**
 
 Control flow statements are essential building blocks in programming that allow us to control the flow of execution in our programs. These statements enable us to make decisions, execute code repeatedly, and create structured and efficient programs. In Java, a powerful and widely-used programming language, mastering control flow statements is crucial for writing robust and dynamic applications. In this comprehensive blog post, we will explore various control flow statements in Java, including conditional statements and loops, and dive into practical examples to solidify our understanding.
 

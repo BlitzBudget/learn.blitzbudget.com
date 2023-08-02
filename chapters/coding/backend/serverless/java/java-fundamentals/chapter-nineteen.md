@@ -1,4 +1,4 @@
-**Introduction to Networking in Java: Learning the Basics of Networking and Communication with Java**
+# Chapter 19: **Introduction to Networking in Java: Learning the Basics of Networking and Communication with Java**
 
 Networking is a fundamental aspect of modern software development, enabling applications to communicate and exchange data over networks such as the Internet. In the world of Java, networking plays a crucial role in building distributed applications, client-server systems, web services, and more. In this blog post, we will explore the basics of networking in Java, including sockets, URLs, TCP and UDP communication, and how to create both client and server applications. Throughout this journey, we will provide practical examples to illustrate each concept, enabling you to gain a solid understanding of networking in Java.
 
