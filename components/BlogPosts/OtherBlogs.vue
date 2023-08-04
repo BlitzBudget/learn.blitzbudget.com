@@ -159,7 +159,7 @@ export default {
             await this.$axios.get(fetchIndexUrl)
                 .then((response) => {
                     this.blogposts = response.data;
-                    this.fetchRelatedBlogs();
+                    this.fetchRelatedBlogs(response.data);
                     this.nextImageURL = this.extractKeywordAndConstructURL(this.nextBlog);
                     this.previousImageURL = this.extractKeywordAndConstructURL(this.previousBlog);
                 })
@@ -167,9 +167,9 @@ export default {
                     console.error('Error fetching content:', error);
                 });
         },
-        fetchRelatedBlogs() {
+        fetchRelatedBlogs(response) {
             const url = this.removeStartingSlash(this.$route.fullPath)
-            const filteredList = this.blogposts.filter(item => {
+            const filteredList = response.filter(item => {
                 let category = item.Category
                 item.FileURL = this.formatSk(item.sk)
                 return url.indexOf(category)
