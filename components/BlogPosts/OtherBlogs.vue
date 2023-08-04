@@ -48,7 +48,8 @@
                                     </p>
                                     <p class="author">
                                         by
-                                        <strong>{{ fetchPreviousBlog.Author }}</strong> , {{ fetchPreviousBlog.creation_date }}
+                                        <strong>{{ fetchPreviousBlog.Author }}</strong> , {{ fetchPreviousBlog.creation_date
+                                        }}
                                     </p>
                                 </div>
                                 <div class="col-md-5">
@@ -157,15 +158,14 @@ export default {
             const fetchIndexUrl = '/content/index.json';
             await this.$axios.get(fetchIndexUrl)
                 .then((response) => {
-                    this.blogposts = response.data
+                    this.blogposts = response.data;
+                    this.fetchRelatedBlogs();
+                    this.nextImageURL = this.extractKeywordAndConstructURL(this.nextBlog);
+                    this.previousImageURL = this.extractKeywordAndConstructURL(this.previousBlog);
                 })
                 .catch((error) => {
                     console.error('Error fetching content:', error);
                 });
-
-            this.fetchRelatedBlogs();
-            this.nextImageURL = this.extractKeywordAndConstructURL(this.nextBlog);
-            this.previousImageURL = this.extractKeywordAndConstructURL(this.previousBlog);
         },
         fetchRelatedBlogs() {
             const url = this.removeStartingSlash(this.$route.fullPath)
