@@ -80,47 +80,7 @@ export default {
     data() {
         return {
             year: new Date().getFullYear(),
-            blogposts: [
-                {
-                    "pk": "learn.blitzbudget.com",
-                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows.json",
-                    "Author": "Nagarjun Nagesh",
-                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
-                    "creation_date": "2023-07-28T11:21:57Z",
-                    "File": "",
-                    "Name": "Mastering Infrastructure Deployment with AWS CloudFormation and GitHub Workflows",
-                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
-                },
-                {
-                    "pk": "learn.blitzbudget.com",
-                    "sk": "content/coding/backend/serverless/golang/golang-fundamentals/golang-fundamentals-a-comprehensive-guide-to-go-programming.json",
-                    "Author": "Nagarjun Nagesh",
-                    "Category": "coding/backend/serverless/golang/golang-fundamentals",
-                    "creation_date": "2023-07-28T11:21:51Z",
-                    "File": "",
-                    "Name": "Golang Fundamentals: A Comprehensive Guide to Go Programming",
-                    "Tags": "coding, backend, serverless, golang, golang-fundamentals"
-                },
-                {
-                    "pk": "learn.blitzbudget.com",
-                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-8-linking-the-api-domain-name-with-an-http-certificate.json",
-                    "Author": "Nagarjun Nagesh",
-                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
-                    "creation_date": "2023-07-28T11:21:57Z",
-                    "File": "",
-                    "Name": "Chapter 8: Linking the API Domain Name with an HTTP Certificate",
-                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
-                },
-                {
-                    "pk": "learn.blitzbudget.com",
-                    "sk": "content/devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-github-workflows/chapter-7-generating-a-certificate-in-us-east-1-for-the-domain.json",
-                    "Author": "Nagarjun Nagesh",
-                    "Category": "devops/aws/cloudformation/mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows",
-                    "creation_date": "2023-07-28T11:21:57Z",
-                    "File": "",
-                    "Name": "Chapter 7: Generating a Certificate in us-east-1 for the Domain",
-                    "Tags": "devops, aws, cloudformation, mastering-infrastructure-deployment-with-aws-cloudformation-and-gitHub-workflows"
-                }],
+            blogposts: [],
             nextBlog: {
                 pk: "learn.blitzbudget.com",
                 sk: "content/coding/backend/serverless/golang/golang-fundamentals/chapter-1-introduction-to-golang.json",
