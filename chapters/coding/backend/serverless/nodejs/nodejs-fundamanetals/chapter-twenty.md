@@ -5,16 +5,16 @@ Welcome to Chapter 20 of our comprehensive guide on Node.js application developm
 We will cover various scaling strategies and techniques for Node.js applications, including load balancing, vertical and horizontal scaling, microservices, caching, and using cloud services.
 
 ## Table of Contents
-1. [Introduction to Scaling Node.js Applications](#introduction-to-scaling-nodejs-applications)
-2. [Load Balancing](#load-balancing)
-3. [Vertical Scaling](#vertical-scaling)
-4. [Horizontal Scaling](#horizontal-scaling)
-5. [Microservices Architecture](#microservices-architecture)
-6. [Caching for Improved Performance](#caching-for-improved-performance)
-7. [Using Cloud Services](#using-cloud-services)
-8. [Monitoring and Auto-Scaling](#monitoring-and-auto-scaling)
-9. [Best Practices for Scaling Node.js Applications](#best-practices-for-scaling-nodejs-applications)
-10. [Conclusion](#conclusion)
+1. [Introduction to Scaling Node.js Applications](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#introduction-to-scaling-nodejs-applications)
+2. [Load Balancing](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#load-balancing)
+3. [Vertical Scaling](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#vertical-scaling)
+4. [Horizontal Scaling](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#horizontal-scaling)
+5. [Microservices Architecture](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#microservices-architecture)
+6. [Caching for Improved Performance](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#caching-for-improved-performance)
+7. [Using Cloud Services](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#using-cloud-services)
+8. [Monitoring and Auto-Scaling](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#monitoring-and-auto-scaling)
+9. [Best Practices for Scaling Node.js Applications](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#best-practices-for-scaling-nodejs-applications)
+10. [Conclusion](https://learn.blitzbudget.com/coding/backend/serverless/nodejs/nodejs-fundamanetals/chapter-20-scaling-nodejs-applications#conclusion)
 
 Let's get started!
 
