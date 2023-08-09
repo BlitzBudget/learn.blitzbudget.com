@@ -1,4 +1,4 @@
-Chapter 7: Building Lambda Functions using AWS CloudFormation
+# Chapter 7: Building Lambda Functions using AWS CloudFormation
 
 In this chapter, we will learn how to build AWS Lambda functions using AWS CloudFormation. AWS Lambda is a serverless compute service that enables you to run code without provisioning or managing servers. We will walk through the process of defining Lambda functions in a CloudFormation template, specifying the runtime, handler, code, and other essential properties.
 

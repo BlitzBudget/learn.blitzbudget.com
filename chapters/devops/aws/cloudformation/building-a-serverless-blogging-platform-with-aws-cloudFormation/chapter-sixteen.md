@@ -1,4 +1,4 @@
-Chapter 16: Automating CI/CD Pipelines for AWS CloudFormation Templates
+# Chapter 16: Automating CI/CD Pipelines for AWS CloudFormation Templates
 
 Automating Continuous Integration and Continuous Deployment (CI/CD) pipelines for AWS CloudFormation templates allows you to streamline the development, testing, and deployment process of your infrastructure as code. With CI/CD pipelines, you can ensure that changes to your CloudFormation templates are automatically tested and deployed, reducing the risk of errors and improving the overall efficiency of your development workflow. In this chapter, we'll explore how to automate CI/CD pipelines for AWS CloudFormation templates.
 

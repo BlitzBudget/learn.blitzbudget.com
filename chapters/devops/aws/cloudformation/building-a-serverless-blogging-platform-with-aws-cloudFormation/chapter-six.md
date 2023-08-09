@@ -1,4 +1,4 @@
-Chapter 6: Securing API Gateway with Cognito Authorization using AWS CloudFormation
+# Chapter 6: Securing API Gateway with Cognito Authorization using AWS CloudFormation
 
 In this chapter, we will explore how to secure an Amazon API Gateway using Amazon Cognito for authorization with the help of AWS CloudFormation. Amazon API Gateway provides a fully managed service to create, deploy, and manage APIs at any scale. By integrating Amazon Cognito with API Gateway, we can control access to our APIs and secure them using user identities and authentication.
 

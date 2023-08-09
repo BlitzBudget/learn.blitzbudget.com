@@ -1,4 +1,4 @@
-#Chapter 12: Customizing API Gateway Deployment with AWS CloudFormation
+# Chapter 12: Customizing API Gateway Deployment with AWS CloudFormation
 
 Customizing API Gateway deployments allows you to configure various settings to control how your API is deployed and managed. In this chapter, we will explore how to customize the deployment of API Gateway using AWS CloudFormation.
 

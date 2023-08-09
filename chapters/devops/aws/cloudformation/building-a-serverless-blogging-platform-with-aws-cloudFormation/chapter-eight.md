@@ -1,4 +1,4 @@
-Chapter 8: Configuring S3 Buckets using AWS CloudFormation
+# Chapter 8: Configuring S3 Buckets using AWS CloudFormation
 
 In this chapter, we will explore how to configure Amazon S3 buckets using AWS CloudFormation. Amazon S3 (Simple Storage Service) is a scalable object storage service that allows you to store and retrieve any amount of data from anywhere on the web. We will walk through the process of defining S3 bucket resources in a CloudFormation template, including bucket properties and access controls.
 

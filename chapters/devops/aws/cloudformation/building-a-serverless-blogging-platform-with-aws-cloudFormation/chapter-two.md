@@ -1,4 +1,4 @@
-Chapter 2: Defining Parameters and Resources
+# Chapter 2: Defining Parameters and Resources
 
 In this chapter, we will delve into the fundamental building blocks of AWS CloudFormation templates: parameters and resources. These components play a crucial role in defining the infrastructure and the level of customization offered to users when deploying stacks.
 

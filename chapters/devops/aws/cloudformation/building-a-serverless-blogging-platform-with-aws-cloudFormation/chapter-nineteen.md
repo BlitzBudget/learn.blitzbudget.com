@@ -1,4 +1,4 @@
-#Chapter 19: Logging and Monitoring with AWS CloudTrail
+# Chapter 19: Logging and Monitoring with AWS CloudTrail
 
 AWS CloudTrail provides a comprehensive logging and monitoring solution for your AWS resources. It allows you to track user activity and API usage across your AWS infrastructure, giving you valuable insights into who accessed your resources, what actions were performed, and when these actions occurred. This chapter will cover how to enable CloudTrail and configure logging for your AWS CloudFormation stack.
 

@@ -1,23 +1,23 @@
 # Advanced AWS Integration and Deployment Strategies
 
 Chapter Titles:
-1. Introduction to AWS Integration and Deployment
-2. Setting Up GitHub Workflow for AWS Integration
-3. AWS S3 Integration: Storing and Retrieving Data
-4. AWS Lambda Integration: Serverless Computing Made Easy
-5. Deploying Java Applications to EC2 Instances
-6. Elastic Beanstalk Deployment: A PaaS Solution
-7. Integrating AWS CLI for Seamless Deployment
-8. Understanding IAM Roles: OIDC vs. Access Keys
-9. Managing Permissions with IAM Roles and Policies
-10. Security Concerns with Access Keys and Secrets
-11. Best Practices for AWS Security and Access Management
-12. Automating Deployment with AWS CodePipeline
-13. Managing Secrets with AWS Secrets Manager
-14. Implementing Multi-Factor Authentication (MFA) for Enhanced Security
-15. Monitoring and Logging Strategies for AWS Deployments
-16. AWS CloudFormation: Infrastructure as Code
-17. Cost Optimization Techniques for AWS Deployments
-18. High Availability and Scalability in AWS Architecture
-19. Continuous Integration and Continuous Deployment (CI/CD) with AWS
-20. Disaster Recovery Planning and Backup Strategies in AWS
+1. [Introduction to AWS Integration and Deployment](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-1-introduction-to-aws-integration-and-deployment)
+2. [Setting Up GitHub Workflow for AWS Integration](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-2-setting-up-github-workflow-for-aws-integration)
+3. [AWS S3 Integration: Storing and Retrieving Data](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-3-aws-s3-integration-storing-and-retrieving-data)
+4. [AWS Lambda Integration: Serverless Computing Made Easy](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-4-aws-lambda-integration-serverless-computing-made-easy)
+5. [Deploying Java Applications to EC2 Instances](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-5-deploying-java-applications-to-ec2-instances)
+6. [Elastic Beanstalk Deployment: A PaaS Solution](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-6-elastic-beanstalk-deployment-a-paas-solution)
+7. [Integrating AWS CLI for Seamless Deployment](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-7-integrating-aws-cli-for-seamless-deployment)
+8. [Understanding IAM Roles: OIDC vs. Access Keys](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-8-understanding-iam-roles-oidc-vs-access-keys)
+9. [Managing Permissions with IAM Roles and Policies](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-9-managing-permissions-with-iam-roles-and-policies)
+10. [Security Concerns with Access Keys and Secrets](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-10-security-concerns-with-access-keys-and-secrets)
+11. [Best Practices for AWS Security and Access Management](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-11-best-practices-for-aws-security-and-access-management)
+12. [Automating Deployment with AWS CodePipeline](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-12-automating-deployment-with-aws-codepipeline)
+13. [Managing Secrets with AWS Secrets Manager](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-13-managing-secrets-with-aws-secrets-manager)
+14. [Implementing Multi-Factor Authentication (MFA) for Enhanced Security](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-14-implementing-multi-factor-authentication-mfa-for-enhanced-security)
+15. [Monitoring and Logging Strategies for AWS Deployments](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-15-monitoring-and-logging-strategies-for-aws-deployments)
+16. [AWS CloudFormation: Infrastructure as Code](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-16-aws-cloudformation-infrastructure-as-code)
+17. [Cost Optimization Techniques for AWS Deployments](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-17-cost-optimization-techniques-for-aws-deployments)
+18. [High Availability and Scalability in AWS Architecture](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-18-high-availability-and-scalability-in-aws-architecture)
+19. [Continuous Integration and Continuous Deployment (CI/CD) with AWS](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-19-continuous-integration-and-continuous-deployment-cicd-with-aws)
+20. [Disaster Recovery Planning and Backup Strategies in AWS](https://learn.blitzbudget.com/devops/aws/advanced-aws-integration-and-deployment-strategies/chapter-20-disaster-recovery-planning-and-backup-strategies-in-aws)

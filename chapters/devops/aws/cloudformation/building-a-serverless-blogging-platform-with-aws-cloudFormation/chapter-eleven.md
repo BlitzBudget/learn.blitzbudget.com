@@ -1,4 +1,4 @@
-#Chapter 11: Usage Plans and Rate Limiting with AWS CloudFormation
+# Chapter 11: Usage Plans and Rate Limiting with AWS CloudFormation
 
 Usage plans and rate limiting are essential features in API Gateway that enable API owners to control and manage how clients access their APIs. In this chapter, we will explore how to implement usage plans and rate limiting for our API Gateway using AWS CloudFormation.
 

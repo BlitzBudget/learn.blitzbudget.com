@@ -1,4 +1,4 @@
-#Chapter 20: Best Practices for CloudFormation Templates
+# Chapter 20: Best Practices for CloudFormation Templates
 
 AWS CloudFormation is a powerful tool for managing and provisioning AWS resources through infrastructure as code. To ensure the reliability, scalability, and maintainability of your CloudFormation templates, it is essential to follow best practices. In this chapter, we will cover some of the best practices to consider when designing and writing CloudFormation templates.
 

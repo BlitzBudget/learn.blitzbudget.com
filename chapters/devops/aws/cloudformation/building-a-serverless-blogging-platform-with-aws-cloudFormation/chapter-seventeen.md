@@ -1,4 +1,4 @@
-Chapter 17: Using Nested Stacks for Modularity
+# Chapter 17: Using Nested Stacks for Modularity
 
 AWS CloudFormation allows you to create reusable and modular templates by using Nested Stacks. Nested Stacks are separate templates that you can reference from within a main CloudFormation template. This modular approach enhances the organization, reusability, and maintainability of your infrastructure as code.
 

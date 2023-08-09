@@ -1,4 +1,4 @@
-#Chapter 14: Generating SSL Certificates with AWS CloudFormation
+# Chapter 14: Generating SSL Certificates with AWS CloudFormation
 
 Securing communication between clients and your API is crucial for maintaining data privacy and integrity. In AWS API Gateway, this is achieved through SSL certificates, which enable the use of HTTPS for encrypted connections. AWS CloudFormation provides a streamlined way to generate SSL certificates using the `AWS::CertificateManager::Certificate` resource. In this chapter, we'll explore how to generate SSL certificates using AWS CloudFormation.
 

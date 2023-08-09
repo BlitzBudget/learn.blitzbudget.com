@@ -1,4 +1,4 @@
-#Chapter 3: Setting up API Gateway with AWS CloudFormation
+# Chapter 3: Setting up API Gateway with AWS CloudFormation
 
 In this chapter, we will explore the process of setting up an API Gateway using AWS CloudFormation. API Gateway is a fully managed service that allows you to create, publish, maintain, monitor, and secure APIs at any scale. By using CloudFormation to configure API Gateway, you can efficiently define the API's structure, authentication, and integration with other AWS services.
 

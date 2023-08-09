@@ -1,4 +1,4 @@
-Chapter 9: Handling Dead Letter Queues with AWS CloudFormation
+# Chapter 9: Handling Dead Letter Queues with AWS CloudFormation
 
 In this chapter, we will explore how to handle dead letter queues using AWS CloudFormation. Dead Letter Queues (DLQs) are a crucial component in building resilient and fault-tolerant applications. They provide a way to capture and retain messages that couldn't be successfully processed by a consumer, such as a Lambda function, an Amazon SQS queue, or an SNS topic. We will demonstrate how to set up a Dead Letter Queue for notifications in the context of our CloudFormation template.
 

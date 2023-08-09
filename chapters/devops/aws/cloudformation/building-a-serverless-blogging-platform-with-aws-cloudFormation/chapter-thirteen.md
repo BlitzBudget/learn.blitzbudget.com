@@ -1,4 +1,4 @@
-#Chapter 13: Setting Up a Custom Domain with AWS CloudFormation
+# Chapter 13: Setting Up a Custom Domain with AWS CloudFormation
 
 Setting up a custom domain for your API Gateway allows you to provide a more branded and user-friendly experience to your API consumers. With AWS CloudFormation, you can easily configure a custom domain for your API Gateway. In this chapter, we'll explore how to set up a custom domain using AWS CloudFormation.
 

@@ -1,4 +1,4 @@
-#Chapter 5: Configuring Cognito User Pool with AWS CloudFormation
+# Chapter 5: Configuring Cognito User Pool with AWS CloudFormation
 
 In this chapter, we will explore how to configure an Amazon Cognito User Pool using AWS CloudFormation. Amazon Cognito provides a fully managed user identity and access control service that enables you to easily add user sign-up, sign-in, and access control to your web or mobile applications. By using CloudFormation to define our Cognito User Pool, we can manage the configuration in a scalable and repeatable manner.
 

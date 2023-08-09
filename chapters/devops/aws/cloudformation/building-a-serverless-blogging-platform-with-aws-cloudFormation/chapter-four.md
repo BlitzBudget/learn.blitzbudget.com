@@ -1,4 +1,4 @@
-#Chapter 4: Integrating Lambda Functions with AWS API Gateway
+# Chapter 4: Integrating Lambda Functions with AWS API Gateway
 
 In this chapter, we will explore how to integrate AWS Lambda functions with API Gateway using AWS CloudFormation. Lambda functions provide a serverless way to execute code in response to API requests, making it an ideal candidate for implementing business logic and data processing.
 

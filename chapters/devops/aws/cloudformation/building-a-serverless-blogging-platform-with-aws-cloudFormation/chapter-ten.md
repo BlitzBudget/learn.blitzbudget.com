@@ -1,4 +1,4 @@
-#Chapter 10: Implementing API Key Authentication with AWS CloudFormation
+# Chapter 10: Implementing API Key Authentication with AWS CloudFormation
 
 API Key authentication is an essential mechanism to secure access to APIs and control usage. It allows API owners to distribute unique API keys to clients, granting them permission to access the API. In this chapter, we will explore how to implement API Key authentication for our API Gateway using AWS CloudFormation.
 

@@ -1,22 +1,22 @@
 # "Mastering AWS CDK: Infrastructure as Code and Resource Deployment on AWS"
 
-Chapter 1: Introduction to AWS CDK - Getting Started with Infrastructure as Code
-Chapter 2: Setting Up Your AWS CDK Environment - Preparing for Resource Deployment
-Chapter 3: Creating an API Gateway - Building an API for Your Application
-Chapter 4: Configuring Custom Domains - Managing Domain Names for API Endpoints
-Chapter 5: Integrating Lambda Functions - Executing Serverless Code in AWS
-Chapter 6: Storing Data in DynamoDB - Using NoSQL Database for Your Application
-Chapter 7: Uploading Files to S3 - Managing Objects in Amazon S3 Buckets
-Chapter 8: Using SNS for Notifications - Publish and Subscribe to Events
-Chapter 9: Applying IAM Roles - Managing Access and Permissions to AWS Resources
-Chapter 10: Deploying a CloudFront Distribution - Accelerating Content Delivery with CDN
-Chapter 11: Managing Usage Plans - Controlling API Access with Throttling and Quotas
-Chapter 12: Handling Dead Letter Queues - Dealing with Failed Lambda Executions
-Chapter 13: Configuring API Gateway Methods - Customizing Endpoint Behavior
-Chapter 14: Integrating Polly for Text-to-Speech - Generating Audio Content from Text
-Chapter 15: Creating a Lambda Subscription - Receiving Notifications on Resource Changes
-Chapter 16: Categorizing Blog Content - Organizing Data with Lambda Functions
-Chapter 17: Deleting Blog Entries - Removing Data and Handling Dependencies
-Chapter 18: Creating Learn Content - Processing and Storing Learning Resources
-Chapter 19: Managing API Gateway Access - Securing and Authorizing Endpoints
-Chapter 20: Conclusion and Best Practices - Summary of AWS CDK Resource Deployment
+[Chapter 1: Introduction to AWS CDK - Getting Started with Infrastructure as Code](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-1-introduction-to-aws-cdk-getting-started-with-infrastructure-as-code)
+[Chapter 2: Setting Up Your AWS CDK Environment - Preparing for Resource Deployment](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-2-setting-up-your-aws-cdk-environment-preparing-for-resource-deployment)
+[Chapter 3: Creating an API Gateway - Building an API for Your Application](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-3-creating-an-api-gateway-building-an-api-for-your-application)
+[Chapter 4: Configuring Custom Domains - Managing Domain Names for API Endpoints](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-4-configuring-custom-domains-managing-domain-names-for-api-endpoints)
+[Chapter 5: Integrating Lambda Functions - Executing Serverless Code in AWS](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-5-integrating-lambda-functions-executing-serverless-code-in-aws)
+[Chapter 6: Storing Data in DynamoDB - Using NoSQL Database for Your Application](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-6-storing-data-in-dynamodb-using-nosql-database-for-your-application)
+[Chapter 7: Uploading Files to S3 - Managing Objects in Amazon S3 Buckets](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-7-uploading-files-to-s3-managing-objects-in-amazon-s3-buckets)
+[Chapter 8: Using SNS for Notifications - Publish and Subscribe to Events](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-8-using-sns-for-notifications-publish-and-subscribe-to-events)
+[Chapter 9: Applying IAM Roles - Managing Access and Permissions to AWS Resources](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-9-applying-iam-roles-managing-access-and-permissions-to-aws-resources)
+[Chapter 10: Deploying a CloudFront Distribution - Accelerating Content Delivery with CDN](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-10-deploying-a-cloudfront-distribution-accelerating-content-delivery-with-cdn)
+[Chapter 11: Managing Usage Plans - Controlling API Access with Throttling and Quotas](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-11-managing-usage-plans-controlling-api-access-with-throttling-and-quotas)
+[Chapter 12: Handling Dead Letter Queues - Dealing with Failed Lambda Executions](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-12-handling-dead-letter-queues-dealing-with-failed-lambda-executions)
+[Chapter 13: Configuring API Gateway Methods - Customizing Endpoint Behavior](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-13-configuring-api-gateway-methods-customizing-endpoint-behavior)
+[Chapter 14: Integrating Polly for Text-to-Speech - Generating Audio Content from Text](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-14-integrating-polly-for-text-to-speech-generating-audio-content-from-text)
+[Chapter 15: Creating a Lambda Subscription - Receiving Notifications on Resource Changes](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-15-creating-a-lambda-subscription-receiving-notifications-on-resource-changes)
+[Chapter 16: Categorizing Blog Content - Organizing Data with Lambda Functions](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-16-categorizing-blog-content-organizing-data-with-lambda-functions)
+[Chapter 17: Deleting Blog Entries - Removing Data and Handling Dependencies](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-17-deleting-blog-entries-removing-data-and-handling-dependencies)
+[Chapter 18: Creating Learn Content - Processing and Storing Learning Resources](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-18-creating-learn-content-processing-and-storing-learning-resources)
+[Chapter 19: Managing API Gateway Access - Securing and Authorizing Endpoints](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-19-managing-api-gateway-access-securing-and-authorizing-endpoints)
+[Chapter 20: Conclusion and Best Practices - Summary of AWS CDK Resource Deployment](https://learn.blitzbudget.com/devops/aws/cdk/mastering-aws-cdk-infrastructure-as-code-and-resource-deployment-on-aws/chapter-20-conclusion-and-best-practices-summary-of-aws-cdk-resource-deployment)
