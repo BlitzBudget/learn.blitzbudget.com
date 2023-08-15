@@ -11,7 +11,7 @@
 9. [Uploading and Syncing Files to AWS S3 with GitHub Actions](https://learn.blitzbudget.com/coding/github/workflows/github-actions-and-aws-deployment/chapter-9-uploading-and-syncing-files-to-aws-s3-with-github-actions)
 10. [Managing Permissions and Access Control in AWS S3](https://learn.blitzbudget.com/coding/github/workflows/github-actions-and-aws-deployment/chapter-10-managing-permissions-and-access-control-in-aws-s3)
 11. [Creating and Configuring AWS Lambda Functions](https://learn.blitzbudget.com/coding/github/workflows/github-actions-and-aws-deployment/chapter-11-creating-and-configuring-aws-lambda-functions)
-12. Automating AWS Lambda Deployment with GitHub Actions](https://learn.blitzbudget.com/coding/github/workflows/github-actions-and-aws-deployment/chapter-12-automating-aws-lambda-deployment-with-github-actions)
+12. [Automating AWS Lambda Deployment with GitHub Actions](https://learn.blitzbudget.com/coding/github/workflows/github-actions-and-aws-deployment/chapter-12-automating-aws-lambda-deployment-with-github-actions)
 13. [Using OIDC for Role-Based Deployment in AWS](https://learn.blitzbudget.com/coding/github/workflows/github-actions-and-aws-deployment/chapter-13-using-oidc-for-role-based-deployment-in-aws)
 14. [Managing Secrets and Credentials for AWS Deployment](https://learn.blitzbudget.com/coding/github/workflows/github-actions-and-aws-deployment/chapter-14-managing-secrets-and-credentials-for-aws-deployment)
 15. [Securely Accessing AWS Services with IAM Roles](https://learn.blitzbudget.com/coding/github/workflows/github-actions-and-aws-deployment/chapter-15-securely-accessing-aws-services-with-iam-roles)
